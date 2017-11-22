@@ -4,10 +4,12 @@ Template Name: Comic Chapters
 */
 get_header();
 
+	$comic = $_GET['title'];
+
 	$args = array(
 				'post_type'		=> 'comic',
 				'order'			=> 'ASC',
-				'chapters' 		=> 'austins-inferno',
+				'chapters' 		=> $comic,
 				'meta_key' 		=> 'is_cover',
 				'meta_value' 	=> 'yes'
 			);
