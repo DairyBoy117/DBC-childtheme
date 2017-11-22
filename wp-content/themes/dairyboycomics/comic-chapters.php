@@ -31,7 +31,7 @@ get_header(); ?>
 		</div>
 
 		<div class="option-bar">
-				<input type="submit" value="Search" class="real-btn btn">
+				<input type="submit" value="Switch" class="real-btn btn">
 		</div>	
 
 	</form>
@@ -79,17 +79,17 @@ get_header(); ?>
 						} else {
 							echo '<p>' . $term->name . '</p>';
 							echo '<p>Pages: ' . $term->count . '</p>';
-							$cantoSlug = $term->slug;
+							$chapterSlug = $term->slug;
 						}
 						$i++;
 					} ?>
 
 					<?php
-					//Date of first comic in canto
+					//Date of first comic in chapter
 					$firstDateArg = array (
 						'post_type'			=> 'comic',
 						'order'				=> 'ASC',
-						'chapters' 			=> $cantoSlug,
+						'chapters' 			=> $chapterSlug,
 	                    'posts_per_page'    => 1
 	                );
 	                $firstDate = new WP_Query( $firstDateArg );
@@ -100,10 +100,10 @@ get_header(); ?>
 	                    endwhile;
 	                endif;
 
-	                //Date of last comic in canto
+	                //Date of last comic in chapter
 					$lastDateArg = array (
 						'post_type'			=> 'comic',
-						'chapters' 			=> $cantoSlug,
+						'chapters' 			=> $chapterSlug,
 	                    'posts_per_page'    => 1
 	                );
 	                $lastDate = new WP_Query( $lastDateArg );
@@ -117,14 +117,14 @@ get_header(); ?>
 
 					<ul>
 						<li>
-							<a href="<?php echo $firstPage; ?>">First page of canto</a>
+							<a href="<?php echo $firstPage; ?>">First page</a>
 						</li>
 						<?php
-						//Get start of story arcs within canto
+						//Get start of story arcs within chapter
 						$storyArgs = array (
 							'post_type'		=> 'comic',
 							'order'			=> 'ASC',
-							'chapters' 		=> $cantoSlug,
+							'chapters' 		=> $chapterSlug,
 		                   	'meta_query' => array(
 						        array(
 						            'key'     => 'story_start',
