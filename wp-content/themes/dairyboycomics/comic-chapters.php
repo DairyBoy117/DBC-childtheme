@@ -2,10 +2,44 @@
 /*
 Template Name: Comic Chapters
 */
-get_header();
+get_header(); ?>
+
+	<form class="" action="" method="get">
+
+		<div class="option-bar">
+			<label for="select-comic">Comic</label>
+	    	<span class="selectwrap">
+	        	<select name="title" id="select-comic" class="search-select" tabindex="-1" aria-hidden="true">
+		        	<option value="all" selected="selected">All</option>
+
+					<?php
+					$taxonomy = 'chapters';
+					$term_args = array(
+						'parent' => 0,
+						'order' => 'DESC'
+					);
+					$tax_terms = get_terms($taxonomy, $term_args);
+					?>
+					<ul>
+					<?php
+					foreach ($tax_terms as $tax_term) {  ?>
+					        <option value="<?php echo $tax_term->slug; ?>"><?php echo $tax_term->name; ?></option>
+					<?php } ?>
+
+		        </select>
+	    	</span>
+		</div>
+
+		<div class="option-bar">
+				<input type="submit" value="Search" class="real-btn btn">
+		</div>	
+
+	</form>
+	
+	<?php
 
 	$comic = $_GET['title'];
-
+	
 	$args = array(
 				'post_type'		=> 'comic',
 				'order'			=> 'ASC',
@@ -22,7 +56,14 @@ get_header();
 		<div class="row">
 
 	    <?php while($category_posts->have_posts()) : 
-	        $category_posts->the_post(); ?>
+	        $category_posts->the_post();
+
+				if ($x == 4) { ?>
+					</div>
+					<div class="row">
+				<?php }
+
+				$x++; ?>
 
 				<div class="col-sm-3">
 
@@ -108,7 +149,7 @@ get_header();
 
 	            </div>
 
-	    <?php endwhile; ?>
+		<?php endwhile; ?>
 
 	    </div>
 
