@@ -27,13 +27,43 @@ get_header();
 					} else {
 						echo '<p>' . $term->name . '</p>';
 						echo '<p>Pages: ' . $term->count . '</p>';
+						$cantoSlug = $term->slug;
 					}
 					$i++;
-				}
+				} ?>
 
+				<?php
+				//Date of first comic in canto
+				$args2 = array (
+					'post_type'		=> 'comic',
+					'order'			=> 'ASC',
+					'chapters' 		=> $cantoSlug,
+                    'posts_per_page'    => 1
+                );
+                $firstDate = new WP_Query( $args2 );
+                if ( $firstDate -> have_posts() ) :
+                    while ( $firstDate -> have_posts() ) : $firstDate -> the_post();
+                        $startDate = get_the_date('M j, Y');
+                    endwhile;
+                endif;
 
+                //Date of last comic in canto
+				$args3 = array (
+					'post_type'		=> 'comic',
+					'order'			=> 'DESC',
+					'chapters' 		=> $cantoSlug,
+                    'posts_per_page'    => 1
+                );
+                $secondDate = new WP_Query( $args3 );
+                if ( $secondDate -> have_posts() ) :
+                    while ( $secondDate -> have_posts() ) : $secondDate -> the_post();
+                        $endDate = get_the_date('M j, Y');
+                    endwhile;
+                endif; ?>
 
-	    endwhile;
+                <p><?php echo $startDate . ' - ' . $endDate; ?></p>
+
+	    <?php endwhile;
 	else: 
 	?>
 
