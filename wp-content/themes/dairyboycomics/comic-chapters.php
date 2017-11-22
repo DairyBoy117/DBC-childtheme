@@ -17,7 +17,26 @@ get_header();
 	         $category_posts->the_post(); 
 
 	         the_post_thumbnail('thumbnail'); 
+			
+			$terms = get_the_terms(get_the_ID(), 'chapters');
+			$i = 0;
+			foreach($terms as $term) {
+				if ($i == 0) {
+					echo "";
+				} else {
+					echo $term->name;
+				}
+				$i++;
+			}
 
+	      endwhile;
+	   else: 
+	?>
+
+	      Oops, there are no posts.
+
+	<?php
+	   endif;
 
 	wp_reset_postdata();
 	wp_reset_query();
