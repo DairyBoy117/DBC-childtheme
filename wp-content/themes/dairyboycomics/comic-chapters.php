@@ -88,7 +88,7 @@ get_header(); ?>
 					} ?> 
 					
 					<a href="<?php echo site_url(); ?>/chapter/?title=<?php echo $chapterSlug; ?>">
-						<img src="<?php echo the_post_thumbnail_url( 'thumbnail' ); ?>" alt="">						
+						<img src="<?php echo the_post_thumbnail_url( 'thumbnail' ); ?>" alt="<?php echo $chapterName; ?>">						
 					</a>
 
 					<p>

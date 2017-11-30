@@ -36,7 +36,7 @@ get_header();
 				<div class="col-sm-3">
 
 					<a href="<?php echo the_permalink(); ?>">
-						<img src="<?php echo the_post_thumbnail_url( 'thumbnail' ); ?>" alt="">						
+						<img src="<?php echo the_post_thumbnail_url( 'thumbnail' ); ?>" alt="<?php the_title(); ?>">						
 					</a>
 
 					<p>
