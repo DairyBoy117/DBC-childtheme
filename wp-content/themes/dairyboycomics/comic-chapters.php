@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Comic Chapters
+Template Name: Chapter Archive
 */
 get_header(); ?>
 
@@ -39,6 +39,10 @@ get_header(); ?>
 	<?php
 
 	$comic = $_GET['title'];
+
+	if ($comic == 'all') {
+		$comic = '';
+	}
 	
 	$args = array(
 				'post_type'		=> 'comic',
@@ -153,8 +157,7 @@ get_header(); ?>
 
 	    </div>
 
-	<?php else: 
-	?>
+	<?php else: ?>
 
 	    Oops, there are no posts.
 
