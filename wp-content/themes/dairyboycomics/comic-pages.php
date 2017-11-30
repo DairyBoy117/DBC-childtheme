@@ -35,7 +35,17 @@ get_header();
 
 				<div class="col-sm-3">
 
-					<?php the_post_thumbnail('thumbnail'); ?>
+					<a href="<?php echo the_permalink(); ?>">
+						<img src="<?php echo the_post_thumbnail_url( 'thumbnail' ); ?>" alt="">						
+					</a>
+
+					<p>
+						<a href="<?php echo the_permalink(); ?>"><?php the_title(); ?></a>		
+					</p>
+
+					<p>
+						<?php echo get_the_date(); ?>
+					</p>
 
 	            </div>
 
