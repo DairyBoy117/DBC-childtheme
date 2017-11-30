@@ -18,3 +18,37 @@ function add_bootstrap() {
     wp_enqueue_style( 'bootstrap-css' );
 }
 add_action( 'wp_enqueue_scripts', 'add_bootstrap' );
+
+function create_character_bios() {
+    $labels = array(
+        'name'                => __( 'Characters' ),
+        'singular_name'       => __( 'Character' ),
+        'menu_name'           => __( 'Characters' ),
+        'all_items'           => __( 'All Characters' ),
+        'view_item'           => __( 'View Character' ),
+        'add_new_item'        => __( 'Add New Character' ),
+        'add_new'             => __( 'Add New' ),
+        'edit_item'           => __( 'Edit Character' ),
+        'update_item'         => __( 'Update Character' ),
+        'search_items'        => __( 'Search Character' )
+    );
+
+    $args = array(
+      'label' => 'Characters',
+      'labels' => $labels,
+        'public' => true,
+        'show_ui' => true,
+        'capability_type' => 'post',
+        'has_archive' => true,
+        'hierarchical' => false,
+        'rewrite' => array('slug' => 'characters'),
+        'query_var' => true,
+        'menu_icon' => 'dashicons-id-alt',
+        'supports' => array(
+            'title',
+            'editor',
+            'thumbnail'),
+        );
+    register_post_type( 'characters', $args );
+}
+add_action( 'init', 'create_character_bios' );
