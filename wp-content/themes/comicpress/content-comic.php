@@ -1,5 +1,5 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<div class="post-content">
+	<div class="post-content"> <!-- yolo -->
 		<?php if (!comicpress_is_bbpress()) comicpress_display_author_gravatar(); ?>
 		<div class="post-info">
 			<?php 
