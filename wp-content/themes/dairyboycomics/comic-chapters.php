@@ -72,7 +72,6 @@ get_header(); ?>
 				<div class="col-sm-3">
 
 					<?php
-			        the_post_thumbnail('thumbnail'); 
 					
 					//Get Canto info
 					$terms = get_the_terms(get_the_ID(), 'chapters');
@@ -81,12 +80,23 @@ get_header(); ?>
 						if ($i == 0) {
 							echo "";
 						} else {
-							echo '<p>' . $term->name . '</p>';
-							echo '<p>Pages: ' . $term->count . '</p>';
+							$chapterName = $term->name;
+							$chapterCount = $term->count;
 							$chapterSlug = $term->slug;
 						}
 						$i++;
-					} ?>
+					} ?> 
+					
+					<a href="<?php echo site_url(); ?>/chapter/?title=<?php echo $chapterSlug; ?>">
+						<img src="<?php echo the_post_thumbnail_url( 'thumbnail' ); ?>" alt="<?php echo $chapterName; ?>">						
+					</a>
+
+					<p>
+						<a href="<?php echo site_url(); ?>/chapter/?title=<?php echo $chapterSlug; ?>">
+							<?php echo $chapterName; ?>
+						</a>
+					</p>
+					<p>Pages: <?php echo $chapterCount; ?></p>
 
 					<?php
 					//Date of first comic in chapter
