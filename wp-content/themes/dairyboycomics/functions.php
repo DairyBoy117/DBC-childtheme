@@ -19,6 +19,8 @@ function add_bootstrap() {
 }
 add_action( 'wp_enqueue_scripts', 'add_bootstrap' );
 
+//Character Bios CPT
+
 function create_character_bios() {
     $labels = array(
         'name'                => __( 'Characters' ),
@@ -52,3 +54,22 @@ function create_character_bios() {
     register_post_type( 'characters', $args );
 }
 add_action( 'init', 'create_character_bios' );
+
+function comic_taxonomy() { 
+
+    register_taxonomy(
+        'from_comic',
+        'characters',
+        array(
+            'labels' => array(
+                'name' => 'From Comic',
+                'add_new_item' => 'Add New Comic',
+                'new_item_name' => 'New Comic'
+            ),
+            'show_ui' => true,
+            'hierarchical' => true
+        )
+    );    
+
+}
+add_action ('init', 'comic_taxonomy', 0);
