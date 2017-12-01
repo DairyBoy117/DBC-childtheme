@@ -7,3 +7,14 @@
  Template:     Comicpress
  Version:      1.0.0
 */
+
+
+/*--- CHARACTERS SINGLE PAGE ---*/
+
+.single-characters #sidebar-left, .single-characters #sidebar-right {
+	display: none;
+}
+
+.single-characters #content-column {
+	width: 100% !important;
+}
