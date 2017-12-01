@@ -8,23 +8,56 @@
 				<div class="col-sm-6">
 					<h1><?php the_title(); ?></h1>
 
-					<?php if ( has_term( 'austins-inferno', 'from_comic' ) ) { ?> 
+					<?php if ( has_term( 'austins-inferno', 'from_comic' ) ) { 
 
-						<p>Grade: <?php the_field('grade'); ?></p>
-						<p>Weapon of choice: <?php the_field('weapon_of_choice'); ?></p>
-						<p>Super Powers: <?php the_field('super_powers'); ?></p>
-						<p><?php the_field('random_question'); ?>: <?php the_field('random_answer'); ?></p>
+						$grade = get_field('grade');
+						$weapon = get_field('weapon_of_choice');
+						$powers = get_field('super_powers');
+						$question = get_field('random_question');
+						$answer = get_field('random_answer');
 
-					<?php }
+						if ($grade) { ?>
+							<p>Grade: <?php echo $grade; ?></p>
+						<?php }
 
-					if ( has_term( 'halo-pwned', 'from_comic' ) ) { ?>
+						if ($weapon) { ?>
+							<p>Weapon of choice: <?php echo $weapon; ?></p>
+						<?php }
 
-						<p>Species: <?php the_field('species'); ?></p>
-						<p>Faction: <?php the_field('faction'); ?></p>
-						<p>Played By: <?php the_field('played_by'); ?></p>
-						<a href="<?php the_field('halo_bio'); ?>">Original Character's Bio</a>
-						
-					<?php } ?>
+						if ($powers) { ?>
+							<p>Super Powers: <?php echo $powers; ?></p>
+						<?php }
+
+						if ($question) { ?>
+							<p><?php echo $question; ?>: <?php echo $answer; ?></p>
+						<?php } 
+					
+					}
+
+					if ( has_term( 'halo-pwned', 'from_comic' ) ) {
+
+						$species = get_field('species');
+						$faction = get_field('faction');
+						$played = get_field('played_by');
+						$halo = get_field('halo_bio');
+
+						if ($species) { ?>
+							<p>Species: <?php echo $species; ?></p>
+						<?php }
+
+						if ($faction) { ?>
+							<p>Faction: <?php echo $faction; ?></p>
+						<?php }
+
+						if ($played) { ?>
+							<p>Played By: <?php echo $played; ?></p>
+						<?php }
+
+						if ($halo) { ?>
+							<a href="<?php echo $halo; ?>">Original Character's Bio</a>
+						<?php } 
+
+					} ?>
 				
 				</div>
 				<div class="col-sm-6">
