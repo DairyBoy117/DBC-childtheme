@@ -38,7 +38,8 @@
 
 						$species = get_field('species');
 						$faction = get_field('faction');
-						$played = get_field('played_by');
+						$playedBy = get_field('played_by');
+						$player = $playedBy[0];
 						$halo = get_field('halo_bio');
 
 						if ($species) { ?>
@@ -49,8 +50,8 @@
 							<p>Faction: <?php echo $faction; ?></p>
 						<?php }
 
-						if ($played) { ?>
-							<p>Played By: <?php echo $played; ?></p>
+						if ($playedBy) { ?>
+							<p>Played By: <a href="<?php echo get_permalink($player); ?>"><?php echo get_the_title($player); ?></a></p>
 						<?php }
 
 						if ($halo) { ?>
