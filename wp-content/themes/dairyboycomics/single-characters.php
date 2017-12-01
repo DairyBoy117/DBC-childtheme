@@ -19,7 +19,10 @@
 
 					if ( has_term( 'halo-pwned', 'from_comic' ) ) { ?>
 
-						
+						<p>Species: <?php the_field('species'); ?></p>
+						<p>Faction: <?php the_field('faction'); ?></p>
+						<p>Played By: <?php the_field('played_by'); ?></p>
+						<a href="<?php the_field('halo_bio'); ?>">Original Character's Bio</a>
 						
 					<?php } ?>
 				
