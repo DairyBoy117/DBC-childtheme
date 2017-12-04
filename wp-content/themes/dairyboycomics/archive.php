@@ -60,7 +60,12 @@ get_header(); ?>
 
 		        </select>
 	    	</span>
-		</div> 
+		</div>
+
+		<div class="option-bar large">
+			<label for="keywords-txt">Keywords</label>
+			<input type="text" name="keywords" id="keywords-txt" value="">
+		</div>
 
 		<div class="option-bar">
 				<input type="submit" value="Search" class="real-btn btn">
@@ -71,19 +76,22 @@ get_header(); ?>
 	<?php
 	$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
 
-	$series = $_GET['series'];
-	$character = $_GET['character'];
+	$series = $_GET['title'];
+	$character = $_GET['characterId'];
 	$tag = $_GET['tag'];
 	$date = $_GET['date'];
+	$keywords = $_GET['keywords'];
 
-	if ($comic == 'all') {
-		$comic = '';
+	if ($series == 'all') {
+		$series = '';
 	}
 	
 	$args = array(
 				'post_type'		=> 'comic',
 				'order'			=> 'ASC',
 				'posts_per_page'=> 10,
+				'chapters' 		=> $series,
+				's' 			=> $keywords,
 				'paged'			=> $paged
 			);
 	$category_posts = new WP_Query($args);
