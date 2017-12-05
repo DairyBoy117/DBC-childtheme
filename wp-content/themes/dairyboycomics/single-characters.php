@@ -59,6 +59,8 @@
 						<?php } 
 
 					} ?>
+
+					<a href="<?php echo get_site_url(); ?>/comic/?characterId=<?php echo get_the_ID(); ?>">View Comics</a>
 				
 				</div>
 				<div class="col-sm-6">
@@ -74,7 +76,31 @@
 				</div>
 			</div>
 
-		<?php endwhile;
+			<?php
+			//All other characters
+			$otherCharacters = array (
+				'post_type'			=> 'characters',
+				'orderby'			=> 'title',
+				'order'				=> 'ASC',
+				'from_comic'		=> 'austins-inferno',
+                'posts_per_page'    => -1
+            );
+            $characters = new WP_Query( $otherCharacters );
+            if ( $characters -> have_posts() ) : ?>
+
+            	<div class="row">
+                
+                <?php while ( $characters -> have_posts() ) : $characters -> the_post(); ?>
+                    <div class="col-sm-2">
+						<?php the_title(); ?>
+					</div>
+                <?php endwhile; ?>
+
+            	</div>
+
+            <?php endif;
+
+		endwhile;
 	
 	}
 
