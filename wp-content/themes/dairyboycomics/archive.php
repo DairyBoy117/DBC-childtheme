@@ -63,6 +63,26 @@ get_header(); ?>
 		</div>
 
 		<div class="option-bar large">
+			<label for="select-tag">Tag</label>
+	    	<span class="selectwrap">
+	        	<select name="tag" id="select-tag" class="search-select select2-hidden-accessible" tabindex="-1" aria-hidden="true">
+		        	<option value="all" selected="selected">All</option>
+		        	
+					<?php
+					$tags = 'post_tag';
+					$tag_terms = get_terms($tags);
+					?>
+					<ul>
+					<?php
+					foreach ($tag_terms as $tag_term) { ?>
+					<option value="<?php echo $tag_term->slug; ?>"><?php echo $tag_term->name; ?></option>
+					<?php } ?>
+
+		        </select>
+	    	</span>
+		</div>
+
+		<div class="option-bar large">
 			<label for="keywords-txt">Keywords</label>
 			<input type="text" name="keywords" id="keywords-txt" value="">
 		</div>
@@ -85,12 +105,17 @@ get_header(); ?>
 	if ($series == 'all') {
 		$series = '';
 	}
+
+	if ($tag == 'all') {
+		$tag = '';
+	}
 	
 	$args = array(
 				'post_type'		=> 'comic',
 				'order'			=> 'ASC',
 				'posts_per_page'=> 10,
 				'chapters' 		=> $series,
+				'tag'			=> $tag,
 				's' 			=> $keywords,
 				'paged'			=> $paged
 			);
