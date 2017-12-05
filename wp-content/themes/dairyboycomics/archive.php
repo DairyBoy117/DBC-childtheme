@@ -65,7 +65,7 @@ get_header(); ?>
 		<div class="option-bar large">
 			<label for="select-tag">Tag</label>
 	    	<span class="selectwrap">
-	        	<select name="tag" id="select-tag" class="search-select select2-hidden-accessible" tabindex="-1" aria-hidden="true">
+	        	<select name="post-tag" id="select-tag" class="search-select select2-hidden-accessible" tabindex="-1" aria-hidden="true">
 		        	<option value="all" selected="selected">All</option>
 		        	
 					<?php
@@ -98,7 +98,7 @@ get_header(); ?>
 
 	$series = $_GET['title'];
 	$character = $_GET['characterId'];
-	$tag = $_GET['tag'];
+	$tag = $_GET['post-tag'];
 	$date = $_GET['date'];
 	$keywords = $_GET['keywords'];
 
@@ -109,16 +109,32 @@ get_header(); ?>
 	if ($tag == 'all') {
 		$tag = '';
 	}
-	
-	$args = array(
-				'post_type'		=> 'comic',
-				'order'			=> 'ASC',
-				'posts_per_page'=> 10,
-				'chapters' 		=> $series,
-				'tag'			=> $tag,
-				's' 			=> $keywords,
-				'paged'			=> $paged
-			);
+
+	if ($character == 'all') {
+		$args = array(
+					'post_type'		=> 'comic',
+					'order'			=> 'ASC',
+					'posts_per_page'=> 10,
+					'chapters' 		=> $series,
+					'tag'			=> $tag,
+					's' 			=> $keywords,
+					'paged'			=> $paged
+				);		
+	} else {
+		$args = array(
+					'post_type'		=> 'comic',
+					'order'			=> 'ASC',
+					'posts_per_page'=> 10,
+					'chapters' 		=> $series,
+					'tag'			=> $tag,
+					'meta_key'		=> 'select_characters',
+					'meta_value'	=> $character,
+					'meta_compare'	=> 'LIKE',
+					's' 			=> $keywords,
+					'paged'			=> $paged
+				);		
+	}
+
 	$category_posts = new WP_Query($args);
 
 	if($category_posts->have_posts()) : 
