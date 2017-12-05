@@ -85,7 +85,7 @@ get_header(); ?>
 		<div class="option-bar large">
 			<label for="select-month">Month</label>
 	    	<span class="selectwrap">
-	        	<select name="month" id="month" class="search-select select2-hidden-accessible" tabindex="-1" aria-hidden="true">
+	        	<select name="monthId" id="month" class="search-select select2-hidden-accessible" tabindex="-1" aria-hidden="true">
 		        	
 					<option value="all" selected="selected">All</option>
 					<option value="01">January</option>
@@ -109,7 +109,7 @@ get_header(); ?>
 		<div class="option-bar large">
 			<label for="select-year">Year</label>
 	    	<span class="selectwrap">
-	        	<select name="year" id="year" class="search-select select2-hidden-accessible" tabindex="-1" aria-hidden="true">
+	        	<select name="yearId" id="year" class="search-select select2-hidden-accessible" tabindex="-1" aria-hidden="true">
 		        	
 					<option value="all" selected="selected">All</option>
 
@@ -142,8 +142,8 @@ get_header(); ?>
 	$series = $_GET['title'];
 	$character = $_GET['characterId'];
 	$tag = $_GET['post-tag'];
-	$month = $_GET['month'];
-	$year = $_GET['year'];
+	$month = $_GET['monthId'];
+	$year = $_GET['yearId'];
 	$keywords = $_GET['keywords'];
 
 	if ($series == 'all') {
@@ -174,7 +174,7 @@ get_header(); ?>
 					'date_query' 	=> array(
 									        array(
 									            'month' => $month,
-									            'year'			=> $year,
+									            'year'	=> $year,
 									        )
 									    ),
 					's' 			=> $keywords,
@@ -190,7 +190,7 @@ get_header(); ?>
 					'date_query' 	=> array(
 									        array(
 									            'month' => $month,
-									            'year'			=> $year,
+									            'year'	=> $year,
 									        )
 									    ),					
 					'meta_key'		=> 'select_characters',
