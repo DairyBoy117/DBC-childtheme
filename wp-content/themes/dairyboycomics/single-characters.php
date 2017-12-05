@@ -92,7 +92,10 @@
                 
                 <?php while ( $characters -> have_posts() ) : $characters -> the_post(); ?>
                     <div class="col-sm-2">
-						<?php the_title(); ?>
+                    	<a href="<?php the_permalink(); ?>">
+                    		<?php the_post_thumbnail( array(50,50) ); ?>
+							<?php the_title(); ?>
+                    	</a>
 					</div>
                 <?php endwhile; ?>
 
