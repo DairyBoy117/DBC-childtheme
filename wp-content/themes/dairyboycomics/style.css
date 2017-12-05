@@ -16,6 +16,6 @@
 	display: none;
 }
 
-.single-characters #content-column, .archive #content-column{
+.single-characters #content-column, .archive #content-column,  {
 	width: 100% !important;
 }

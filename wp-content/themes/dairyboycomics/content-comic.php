@@ -1,13 +1,8 @@
-<?php
-if (!comicpress_is_bbpress()) comicpress_display_blog_navigation();
-if (!is_home() && !is_archive() && !is_search()) { comicpress_display_post_thumbnail('large'); ?><div class="clear"></div><?php } 
-?>
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>><!-- yolo -->
-	<div class="post-content">
-		<?php if (is_home() || is_archive() || is_search()) comicpress_display_post_thumbnail('thumbnail'); ?>
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<div class="post-content"> <!-- yolo -->
 		<?php if (!comicpress_is_bbpress()) comicpress_display_author_gravatar(); ?>
 		<div class="post-info">
-			<?php
+			<?php 
 				comicpress_display_post_title();
 				if (!comicpress_is_bbpress()) comicpress_display_post_calendar();
 				if (is_sticky()) { ?><div class="sticky-image">Featured Post</div><?php }
@@ -16,13 +11,11 @@ if (!is_home() && !is_archive() && !is_search()) { comicpress_display_post_thumb
 			<div class="post-text">
 				<?php 
 				comicpress_display_post_author();
-				comicpress_display_post_date();
-				comicpress_display_post_time();
-				comicpress_display_modified_date_time();
+				comicpress_display_post_date();	comicpress_display_post_time(); comicpress_display_modified_date_time();
 				comicpress_display_post_category();
-				/* Integrate the WP-Plugin: WP-PostRatings */
 				if (function_exists('the_ratings') && $post->post_type == 'post') { the_ratings(); }
 				do_action('comicpress-post-info');
+				do_action('comic-post-info');
 				wp_link_pages(array('before' => '<div class="linkpages"><span class="linkpages-pagetext">Pages:</span> ', 'after' => '</div>', 'next_or_number' => 'number'));
 				?>
 			</div>
@@ -34,15 +27,14 @@ if (!is_home() && !is_archive() && !is_search()) { comicpress_display_post_thumb
 			<div class="clear"></div>
 		</div>
 		<div class="post-extras">
-			<?php
+			<?php 
 				comicpress_display_post_tags();
 				do_action('comicpress-post-extras');
+				do_action('comic-post-extras');
 				comicpress_display_comment_link(); 
 			?>
 			<div class="clear"></div>
 		</div>
-		<?php edit_post_link(__( 'Edit this post.', 'comicpress' ), '', ''); ?>
-		<div class="clear"></div>
+		<?php edit_post_link(__( 'Edit this comic.', 'comicpress' ), '', ''); ?>
 	</div>
-	<div class="clear"></div>
 </article>
