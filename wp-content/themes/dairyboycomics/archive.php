@@ -83,6 +83,49 @@ get_header(); ?>
 		</div>
 
 		<div class="option-bar large">
+			<label for="select-month">Month</label>
+	    	<span class="selectwrap">
+	        	<select name="month" id="month" class="search-select select2-hidden-accessible" tabindex="-1" aria-hidden="true">
+		        	
+					<option value="all" selected="selected">All</option>
+					<option value="01">January</option>
+					<option value="02">February</option>
+					<option value="03">March</option>
+					<option value="04">April</option>
+					<option value="05">May</option>
+					<option value="06">June</option>
+					<option value="07">July</option>
+					<option value="08">August</option>
+					<option value="09">September</option>
+					<option value="10">October</option>
+					<option value="11">November</option>
+					<option value="12">December</option>
+
+
+		        </select>
+	    	</span>
+		</div>
+
+		<div class="option-bar large">
+			<label for="select-year">Year</label>
+	    	<span class="selectwrap">
+	        	<select name="year" id="year" class="search-select select2-hidden-accessible" tabindex="-1" aria-hidden="true">
+		        	
+					<option value="all" selected="selected">All</option>
+
+					<?php
+					$already_selected_value = the_date('Y');
+					$earliest_year = 2011;
+
+					foreach (range(date('Y'), $earliest_year) as $x) { ?>
+						<option value="<?php echo $x; ?>"><?php echo $x; ?></option>
+					<?php } ?>
+
+		        </select>
+	    	</span>
+		</div>
+
+		<div class="option-bar large">
 			<label for="keywords-txt">Keywords</label>
 			<input type="text" name="keywords" id="keywords-txt" value="">
 		</div>
@@ -99,7 +142,8 @@ get_header(); ?>
 	$series = $_GET['title'];
 	$character = $_GET['characterId'];
 	$tag = $_GET['post-tag'];
-	$date = $_GET['date'];
+	$month = $_GET['month'];
+	$year = $_GET['year'];
 	$keywords = $_GET['keywords'];
 
 	if ($series == 'all') {
@@ -110,13 +154,29 @@ get_header(); ?>
 		$tag = '';
 	}
 
-	if ($character == 'all') {
+	if ($month == 'all') {
+		$month = '';
+	}
+	$month = (int)$month;
+
+	if ($year == 'all') {
+		$year = '';
+	}
+	$year = (int)$year;
+
+	if ($character == 'all' || $character == '') {
 		$args = array(
 					'post_type'		=> 'comic',
 					'order'			=> 'ASC',
 					'posts_per_page'=> 10,
 					'chapters' 		=> $series,
 					'tag'			=> $tag,
+					'date_query' 	=> array(
+									        array(
+									            'month' => $month,
+									            'year'			=> $year,
+									        )
+									    ),
 					's' 			=> $keywords,
 					'paged'			=> $paged
 				);		
@@ -127,11 +187,18 @@ get_header(); ?>
 					'posts_per_page'=> 10,
 					'chapters' 		=> $series,
 					'tag'			=> $tag,
+					'date_query' 	=> array(
+									        array(
+									            'month' => $month,
+									            'year'			=> $year,
+									        )
+									    ),					
 					'meta_key'		=> 'select_characters',
 					'meta_value'	=> $character,
 					'meta_compare'	=> 'LIKE',
 					's' 			=> $keywords,
 					'paged'			=> $paged
+
 				);		
 	}
 
