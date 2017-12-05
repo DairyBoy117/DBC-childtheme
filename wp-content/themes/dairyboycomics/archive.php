@@ -5,10 +5,6 @@ get_header(); ?>
 
 		<?php include_search_form(); ?>
 
-		<div class="option-bar">
-				<input type="submit" value="Search" class="real-btn btn">
-		</div>	
-
 	</form>
 
 	<?php

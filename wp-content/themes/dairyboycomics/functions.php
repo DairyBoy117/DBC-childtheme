@@ -74,6 +74,9 @@ function comic_taxonomy() {
 }
 add_action ('init', 'comic_taxonomy', 0);
 
+
+//Archive search options
+
 function include_search_form() {
     include "includes/search-form.php";
 }

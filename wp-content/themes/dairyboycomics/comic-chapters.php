@@ -4,12 +4,18 @@ Template Name: Chapter Archive
 */
 get_header(); ?>
 
+	<form class="" action="<?php bloginfo('url'); ?>/comic/" method="get">
+
+		<?php include_search_form(); ?>
+
+	</form>
+
 	<form class="" action="" method="get">
 
 		<div class="option-bar">
 			<label for="select-comic">Comic</label>
 	    	<span class="selectwrap">
-	        	<select name="title" id="select-comic" class="search-select" tabindex="-1" aria-hidden="true">
+	        	<select name="series" id="select-comic" class="search-select" tabindex="-1" aria-hidden="true">
 		        	<option value="all" selected="selected">All</option>
 
 					<?php
@@ -38,7 +44,8 @@ get_header(); ?>
 	
 	<?php
 
-	$comic = $_GET['title'];
+	$comic = $_GET['series'];
+	$comic = sanitize_text_field($comic);
 
 	if ($comic == 'all') {
 		$comic = '';
@@ -48,6 +55,7 @@ get_header(); ?>
 				'post_type'		=> 'comic',
 				'order'			=> 'ASC',
 				'chapters' 		=> $comic,
+				'posts_per_page'=> -1,
 				'meta_key' 		=> 'is_cover',
 				'meta_value' 	=> 'yes'
 			);

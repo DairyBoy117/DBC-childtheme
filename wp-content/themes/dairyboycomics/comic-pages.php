@@ -2,7 +2,15 @@
 /*
 Template Name: Chapter Pages
 */
-get_header();
+get_header(); ?>
+
+	<form class="" action="<?php bloginfo('url'); ?>/comic/" method="get">
+
+		<?php include_search_form(); ?>
+
+	</form>
+
+	<?php
 
 	$chapter = $_GET['title'];
 
@@ -13,6 +21,7 @@ get_header();
 	$args = array(
 				'post_type'		=> 'comic',
 				'order'			=> 'ASC',
+				'posts_per_page'=> -1,
 				'chapters' 		=> $chapter,
 			);
 	$category_posts = new WP_Query($args);

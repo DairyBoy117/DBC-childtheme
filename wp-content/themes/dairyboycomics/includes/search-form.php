@@ -210,3 +210,6 @@
 	<input type="text" name="keywords" id="keywords-txt" value="<?php echo $keywords; ?>">
 </div>
 
+<div class="option-bar">
+		<input type="submit" value="Search" class="real-btn btn">
+</div>	
