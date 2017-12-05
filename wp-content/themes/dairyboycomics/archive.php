@@ -7,7 +7,10 @@ get_header(); ?>
 			<label for="select-comic">Comic</label>
 	    	<span class="selectwrap">
 	        	<select name="title" id="select-comic" class="search-select" tabindex="-1" aria-hidden="true">
-		        	<option value="all" selected="selected">All</option>
+		        	<option value="all" 
+		        		<?php if ($_GET['title'] == 'all') { ?> selected="selected" <?php }; ?>>
+		        		All
+		        	</option>
 
 					<?php
 					$taxonomy = 'chapters';
@@ -20,7 +23,10 @@ get_header(); ?>
 					<ul>
 					<?php
 					foreach ($tax_terms as $tax_term) {  ?>
-					        <option value="<?php echo $tax_term->slug; ?>"><?php echo $tax_term->name; ?></option>
+					        <option value="<?php echo $tax_term->slug; ?>"
+					        		<?php if ($_GET['title'] == $tax_term->slug) { ?> selected="selected" <?php }; ?>>
+					        	<?php echo $tax_term->name; ?>		
+					        </option>
 					<?php } ?>
 
 		        </select>
@@ -32,7 +38,10 @@ get_header(); ?>
 	    	<span class="selectwrap">
 	        	<select name="characterId" id="characterId" class="search-select select2-hidden-accessible" tabindex="-1" aria-hidden="true">
 		        	
-					<option value="all" selected="selected">All</option>
+					<option value="all" 
+						<?php if ($_GET['characterId'] == 'all') { ?> selected="selected" <?php }; ?>>
+						All
+					</option>
 
 					<?php 
 
@@ -43,9 +52,16 @@ get_header(); ?>
 
 			        $posts = new WP_Query($args);
 			 
-			        if( $posts->have_posts() ): while( $posts->have_posts() ) : $posts->the_post(); ?>
+			        if( $posts->have_posts() ): while( $posts->have_posts() ) : $posts->the_post();
 
-			        	<option value="<?php the_ID(); ?>"> <?php the_title(); ?> </option>  
+			        	$Id = get_the_ID();
+
+			        	?>
+
+			        	<option value="<?php the_ID(); ?>" 
+			        		<?php if ($_GET['characterId'] == $Id) { ?> selected="selected" <?php }; ?>> 
+			        		<?php the_title(); ?>
+			        	</option>  
 
 				    <?php
 
@@ -66,7 +82,10 @@ get_header(); ?>
 			<label for="select-tag">Tag</label>
 	    	<span class="selectwrap">
 	        	<select name="post-tag" id="select-tag" class="search-select select2-hidden-accessible" tabindex="-1" aria-hidden="true">
-		        	<option value="all" selected="selected">All</option>
+		        	<option value="all" 
+		        		<?php if ($_GET['post-tag'] == 'all') { ?> selected="selected" <?php }; ?>>
+		        		All
+		        	</option>
 		        	
 					<?php
 					$tags = 'post_tag';
@@ -75,7 +94,10 @@ get_header(); ?>
 					<ul>
 					<?php
 					foreach ($tag_terms as $tag_term) { ?>
-					<option value="<?php echo $tag_term->slug; ?>"><?php echo $tag_term->name; ?></option>
+					<option value="<?php echo $tag_term->slug; ?>"
+						<?php if ($_GET['post-tag'] == $tag_term->slug) { ?> selected="selected" <?php }; ?>>
+						<?php echo $tag_term->name; ?>
+					</option>
 					<?php } ?>
 
 		        </select>
@@ -87,20 +109,58 @@ get_header(); ?>
 	    	<span class="selectwrap">
 	        	<select name="monthId" id="month" class="search-select select2-hidden-accessible" tabindex="-1" aria-hidden="true">
 		        	
-					<option value="all" selected="selected">All</option>
-					<option value="01">January</option>
-					<option value="02">February</option>
-					<option value="03">March</option>
-					<option value="04">April</option>
-					<option value="05">May</option>
-					<option value="06">June</option>
-					<option value="07">July</option>
-					<option value="08">August</option>
-					<option value="09">September</option>
-					<option value="10">October</option>
-					<option value="11">November</option>
-					<option value="12">December</option>
-
+					<option value="all"
+						<?php if ($_GET['monthId'] == 'all') { ?> selected="selected" <?php }; ?>>
+						All
+					</option>
+					<option value="01"
+						<?php if ($_GET['monthId'] == '01') { ?> selected="selected" <?php }; ?>>
+						January
+					</option>
+					<option value="02"
+						<?php if ($_GET['monthId'] == '02') { ?> selected="selected" <?php }; ?>>
+						February
+					</option>
+					<option value="03"
+						<?php if ($_GET['monthId'] == '03') { ?> selected="selected" <?php }; ?>>
+						March
+					</option>
+					<option value="04"
+						<?php if ($_GET['monthId'] == '04') { ?> selected="selected" <?php }; ?>>
+						April
+					</option>
+					<option value="05"
+						<?php if ($_GET['monthId'] == '05') { ?> selected="selected" <?php }; ?>>
+						May
+					</option>
+					<option value="06"
+						<?php if ($_GET['monthId'] == '06') { ?> selected="selected" <?php }; ?>>
+						June
+					</option>
+					<option value="07"
+						<?php if ($_GET['monthId'] == '07') { ?> selected="selected" <?php }; ?>>
+						July
+					</option>
+					<option value="08"
+						<?php if ($_GET['monthId'] == '08') { ?> selected="selected" <?php }; ?>>
+						August
+					</option>
+					<option value="09"
+						<?php if ($_GET['monthId'] == '09') { ?> selected="selected" <?php }; ?>>
+						September
+					</option>
+					<option value="10"
+						<?php if ($_GET['monthId'] == '10') { ?> selected="selected" <?php }; ?>>
+						October
+					</option>
+					<option value="11"
+						<?php if ($_GET['monthId'] == '11') { ?> selected="selected" <?php }; ?>>
+						November
+					</option>
+					<option value="12"
+						<?php if ($_GET['monthId'] == '12') { ?> selected="selected" <?php }; ?>>
+						December
+					</option>
 
 		        </select>
 	    	</span>
@@ -111,14 +171,19 @@ get_header(); ?>
 	    	<span class="selectwrap">
 	        	<select name="yearId" id="year" class="search-select select2-hidden-accessible" tabindex="-1" aria-hidden="true">
 		        	
-					<option value="all" selected="selected">All</option>
+					<option value="all"
+						<?php if ($_GET['yearId'] == 'all') { ?> selected="selected" <?php }; ?>>
+						All
+					</option>
 
 					<?php
-					$already_selected_value = the_date('Y');
 					$earliest_year = 2011;
 
 					foreach (range(date('Y'), $earliest_year) as $x) { ?>
-						<option value="<?php echo $x; ?>"><?php echo $x; ?></option>
+						<option value="<?php echo $x; ?>"
+							<?php if ($_GET['yearId'] == $x) { ?> selected="selected" <?php }; ?>>
+							<?php echo $x; ?>		
+						</option>
 					<?php } ?>
 
 		        </select>
@@ -127,7 +192,11 @@ get_header(); ?>
 
 		<div class="option-bar large">
 			<label for="keywords-txt">Keywords</label>
-			<input type="text" name="keywords" id="keywords-txt" value="">
+			<?php 
+			$keywords = $_GET['keywords'];
+			$keywords = sanitize_text_field($keywords);
+			?>
+			<input type="text" name="keywords" id="keywords-txt" value="<?php echo $keywords; ?>">
 		</div>
 
 		<div class="option-bar">
@@ -144,7 +213,6 @@ get_header(); ?>
 	$tag = $_GET['post-tag'];
 	$month = $_GET['monthId'];
 	$year = $_GET['yearId'];
-	$keywords = $_GET['keywords'];
 
 	if ($series == 'all') {
 		$series = '';
