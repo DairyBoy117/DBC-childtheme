@@ -28,6 +28,12 @@
 		</div>
 		<div class="post-extras">
 			<?php 
+				
+				$tag_terms = get_the_terms( get_the_ID(), 'post_tag');
+				foreach ($tag_terms as $tag_term) {
+					echo $tag_term->name;
+				}
+
 				comicpress_display_post_tags();
 				do_action('comicpress-post-extras');
 				do_action('comic-post-extras');
