@@ -28,21 +28,33 @@
 		</div>
 		<div class="post-extras">
 
-			<?php
-				
-				echo '&#9492; Tags: ';
+			<div class="post-tags">
+		
+				<p>
 
-				$tag_terms = get_the_terms( get_the_ID(), 'post_tag');
-				$numItems = count($tag_terms);
-				$tags = 0;
-				foreach ($tag_terms as $tag_term) {
-					echo $tag_term->name;
-					if (++$tags === $numItems) {
-						echo '';
-					} else {
-						echo ', ';
+				<?php
+					
+					echo '&#9492; Tags: ';
+
+					$tag_terms = get_the_terms( get_the_ID(), 'post_tag');
+					$numItems = count($tag_terms);
+					$tags = 0;
+					foreach ($tag_terms as $tag_term) {
+						echo '<a href="' . get_site_url() . '/comic/?post-tag=' . $tag_term->slug . '">' . $tag_term->name . '</a>';
+						if (++$tags === $numItems) {
+							echo '';
+						} else {
+							echo ', ';
+						}
 					}
-				}
+
+				?>
+
+				</p>
+
+			</div>
+
+				<?php
 
 				comicpress_display_post_tags();
 				do_action('comicpress-post-extras');
