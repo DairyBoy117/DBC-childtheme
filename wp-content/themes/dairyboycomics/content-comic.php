@@ -27,11 +27,21 @@
 			<div class="clear"></div>
 		</div>
 		<div class="post-extras">
-			<?php 
+
+			<?php
 				
+				echo '&#9492; Tags: ';
+
 				$tag_terms = get_the_terms( get_the_ID(), 'post_tag');
+				$numItems = count($tag_terms);
+				$tags = 0;
 				foreach ($tag_terms as $tag_term) {
 					echo $tag_term->name;
+					if (++$tags === $numItems) {
+						echo '';
+					} else {
+						echo ', ';
+					}
 				}
 
 				comicpress_display_post_tags();
