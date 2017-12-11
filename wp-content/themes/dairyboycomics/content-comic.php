@@ -34,6 +34,32 @@
 
 				<?php
 					
+					echo '&#9492; Characters: ';
+
+					$characters = get_field('select_characters');
+					$numItems = count($characters);
+					$tags = 0;
+					foreach ($characters as $character) {
+						echo '<a href="' . get_permalink($character) . '">' . get_the_title($character) . '</a>';
+						if (++$tags === $numItems) {
+							echo '';
+						} else {
+							echo ', ';
+						}
+					}
+
+				?>
+
+				</p>
+
+			</div>
+
+			<div class="post-tags">
+		
+				<p>
+
+				<?php
+					
 					echo '&#9492; Tags: ';
 
 					$tag_terms = get_the_terms( get_the_ID(), 'post_tag');
@@ -56,7 +82,6 @@
 
 				<?php
 
-				comicpress_display_post_tags();
 				do_action('comicpress-post-extras');
 				do_action('comic-post-extras');
 				comicpress_display_comment_link(); 
