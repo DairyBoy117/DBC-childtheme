@@ -2,7 +2,7 @@
 if (!comicpress_is_bbpress()) comicpress_display_blog_navigation();
 if (!is_home() && !is_archive() && !is_search()) { comicpress_display_post_thumbnail('large'); ?><div class="clear"></div><?php } 
 ?>
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>><!-- yolo -->
 	<div class="post-content">
 		<?php if (is_home() || is_archive() || is_search()) comicpress_display_post_thumbnail('thumbnail'); ?>
 		<?php if (!comicpress_is_bbpress()) comicpress_display_author_gravatar(); ?>
