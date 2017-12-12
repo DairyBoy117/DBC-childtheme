@@ -9,15 +9,38 @@
 				if (function_exists('comicpress_show_mood_in_post')) comicpress_show_mood_in_post(); 
 			?>
 			<div class="post-text">
-				<?php 
-				comicpress_display_post_author();
-				comicpress_display_post_date();	comicpress_display_post_time(); comicpress_display_modified_date_time();
-				comicpress_display_post_category();
-				if (function_exists('the_ratings') && $post->post_type == 'post') { the_ratings(); }
-				do_action('comicpress-post-info');
-				do_action('comic-post-info');
-				wp_link_pages(array('before' => '<div class="linkpages"><span class="linkpages-pagetext">Pages:</span> ', 'after' => '</div>', 'next_or_number' => 'number'));
+				<?php the_date(); ?>
+
+				<p>
+
+				<?php
+				echo 'Chapter: ';
+
+				$chapters = get_the_terms( get_the_ID(), 'chapters');
+				$numItems = count($chapters);
+				$tags = 0;
+				foreach($chapters as $chapter) {
+					if($chapter->parent > 0) { 
+						echo '<a href="' . get_site_url() . '/chapter/?title=' . $chapter->slug . '">' . $chapter->name . '</a>';
+						if (++$tags === $numItems) {
+							echo '';
+						} else {
+							echo ', ';
+						}
+					} 
+					else { 
+						echo '<a href="' . get_site_url() . '/comics/?series=' . $chapter->slug . '">' . $chapter->name . '</a>';
+						if (++$tags === $numItems) {
+							echo '';
+						} else {
+							echo ', ';
+						}
+					}
+				}
 				?>
+
+				</p>
+
 			</div>
 			<div class="clear"></div>
 		</div>
