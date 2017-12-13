@@ -29,3 +29,11 @@ body {
     background-attachment: fixed;
     background-size: cover;
 }
+
+/*--- HEADER ---*/
+
+header img {
+	height: 150px;
+    margin: 0 auto;
+    display: block;
+}
