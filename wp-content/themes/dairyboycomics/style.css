@@ -32,8 +32,52 @@ body {
 
 /*--- HEADER ---*/
 
+#header {
+	overflow: visible !important;
+}
+
 header img {
 	height: 150px;
     margin: 0 auto;
+    display: block;
+}
+
+ul#menu-main-menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+    position: relative;
+    width: 100%;
+}
+
+ul#menu-main-menu li {
+    float: left;
+}
+
+ul#menu-main-menu li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+ul#menu-main-menu li a:hover {
+    background-color: #111;
+}
+
+ul.sub-menu {
+    display: none;
+    position: absolute;
+    top: 48px;
+    background-color: #333;
+}
+
+ul.sub-menu li {
+
+}
+
+li.menu-item-has-children:hover ul.sub-menu {
     display: block;
 }

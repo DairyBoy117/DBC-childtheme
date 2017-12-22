@@ -18,22 +18,18 @@
 					<img src="<?php echo get_stylesheet_directory_uri() ?>/img/dbc-logo.png" alt="DairyBoy Comics">
 				</div>
 				<div class="col-sm-10">
-						<div class="header-info">
-							<h1><a href="<?php echo home_url(); ?>"><?php bloginfo('name') ?></a></h1>
-							<div class="description"><?php bloginfo('description') ?></div>
-						</div>
-						<?php comicpress_get_sidebar('header'); ?>
-						<div class="clear"></div>
+					<div class="header-info">
+						<h1><a href="<?php echo home_url(); ?>"><?php bloginfo('name') ?></a></h1>
+						<div class="description"><?php bloginfo('description') ?></div>
+					</div>
+					<?php comicpress_get_sidebar('header'); ?>
+					<div class="clear"></div>
 					
-					<?php 
-					if (!comicpress_themeinfo('disable_default_menubar') && function_exists('comicpress_menubar')) comicpress_menubar();
-					?>
+					<?php wp_nav_menu(); ?>
 				</div>
 			</div>
 		</header>
 		
 <?php
 
-if (comicpress_themeinfo('enable_breadcrumbs')) comicpress_breadcrumbs();
-comicpress_get_sidebar('menubar');
 get_template_part('layout', 'head');
