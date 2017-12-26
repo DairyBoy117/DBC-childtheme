@@ -19,8 +19,9 @@
 				</div>
 				<div class="col-sm-10">
 					<div class="header-info">
-						<h1><a href="<?php echo home_url(); ?>"><?php bloginfo('name') ?></a></h1>
-						<div class="description"><?php bloginfo('description') ?></div>
+
+
+						<img src="<?php echo get_stylesheet_directory_uri() ?>/img/banners/banner_<?php $random = rand(1,2); echo $random; ?>.jpg" alt="" />
 					</div>
 					<?php comicpress_get_sidebar('header'); ?>
 					<div class="clear"></div>
