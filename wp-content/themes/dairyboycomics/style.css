@@ -8,7 +8,6 @@
  Version:      1.0.0
 */
 
-
 /*--- REMOVING SIDEBARS ---*/
 
 .single-characters #sidebar-left, .single-characters #sidebar-right,
@@ -27,4 +26,73 @@ body {
 	background-image: url("img/background.png");
     background-repeat: no-repeat;
     background-attachment: fixed;
+    background-size: cover;
+}
+
+/*--- HEADER ---*/
+
+#header {
+	overflow: visible !important;
+}
+
+header img.logo {
+	height: 150px;
+    margin: 0 auto;
+    display: block;
+}
+
+.header-info {
+    float: none;
+    display: block;
+    padding: 0;
+}
+
+.random-banner {
+	display: block;
+	margin: 0 auto;
+}
+
+ul#menu-main-menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+    position: relative;
+    width: 100%;
+    border-radius: 10px;
+}
+
+ul#menu-main-menu li {
+    float: left;
+}
+
+ul#menu-main-menu li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+ul#menu-main-menu li a:hover {
+    background-color: #111;
+}
+
+ul#menu-main-menu li.rss {
+	float: right;
+}
+
+ul.sub-menu {
+    display: none;
+    position: absolute;
+    top: 48px;
+    background-color: #333;
+}
+
+ul.sub-menu li {
+
+}
+
+li.menu-item-has-children:hover ul.sub-menu {
+    display: block;
 }
