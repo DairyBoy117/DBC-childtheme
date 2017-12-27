@@ -59,6 +59,7 @@ ul#menu-main-menu {
     background-color: #333;
     position: relative;
     width: 100%;
+    border-radius: 10px;
 }
 
 ul#menu-main-menu li {
