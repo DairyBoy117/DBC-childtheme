@@ -15,11 +15,15 @@
 		<header id="header">
 			<div class="row">
 				<div class="col-sm-2">
-					<img src="<?php echo get_stylesheet_directory_uri() ?>/img/dbc-logo.png" class="logo" alt="DairyBoy Comics">
+					<a href="<?php echo site_url(); ?>">
+						<img src="<?php echo get_stylesheet_directory_uri() ?>/img/dbc-logo.png" class="logo" alt="DairyBoy Comics">
+					</a>
 				</div>
 				<div class="col-sm-10">
 					<div class="header-info">
-						<img src="<?php echo get_stylesheet_directory_uri() ?>/img/banners/banner_<?php $random = rand(1,2); echo $random; ?>.jpg" alt="Home to Austin's Inferno" class="random-banner"/>
+						<a href="<?php echo site_url(); ?>">
+							<img src="<?php echo get_stylesheet_directory_uri() ?>/img/banners/banner_<?php $random = rand(1,2); echo $random; ?>.jpg" alt="Home to Austin's Inferno" class="random-banner"/>
+						</a>
 					</div>
 					<?php comicpress_get_sidebar('header'); ?>
 					<div class="clear"></div>
