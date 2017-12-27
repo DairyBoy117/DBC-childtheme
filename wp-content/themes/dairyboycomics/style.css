@@ -8,7 +8,6 @@
  Version:      1.0.0
 */
 
-
 /*--- REMOVING SIDEBARS ---*/
 
 .single-characters #sidebar-left, .single-characters #sidebar-right,
@@ -36,10 +35,21 @@ body {
 	overflow: visible !important;
 }
 
-header img {
+header img.logo {
 	height: 150px;
     margin: 0 auto;
     display: block;
+}
+
+.header-info {
+    float: none;
+    display: block;
+    padding: 0;
+}
+
+.random-banner {
+	display: block;
+	margin: 0 auto;
 }
 
 ul#menu-main-menu {
