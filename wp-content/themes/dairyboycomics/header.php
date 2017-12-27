@@ -24,7 +24,10 @@
 					<?php comicpress_get_sidebar('header'); ?>
 					<div class="clear"></div>
 					
-					<?php wp_nav_menu(); ?>
+					<nav>
+						<?php wp_nav_menu(); ?>
+					</nav>
+					
 				</div>
 			</div>
 		</header>

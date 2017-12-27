@@ -77,6 +77,10 @@ ul#menu-main-menu li a:hover {
     background-color: #111;
 }
 
+ul#menu-main-menu li.rss {
+	float: right;
+}
+
 ul.sub-menu {
     display: none;
     position: absolute;
