@@ -5,6 +5,9 @@ Template Name: Home
 get_header(); ?>
 
 <div id="comic">
+	<div id="PW-ad-box">
+		<div>project wonderful ad box</div>
+	</div>
 	<?php
 		$args = array(
 			'post_type'		=> 'comic',
@@ -16,7 +19,7 @@ get_header(); ?>
 		if($query_posts->have_posts()) : while($query_posts->have_posts()) : $query_posts->the_post(); ?>
 			
 			<a href="<?php get_post_permalink(); ?>">
-				<img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="comic">
+				<img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>">
 			</a>
 
 		<?php endwhile; endif; ?>

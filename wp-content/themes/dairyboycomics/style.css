@@ -108,9 +108,22 @@ li.menu-item-has-children:hover ul.sub-menu {
 }
 
 #comic {
-	padding: 10px;
+	padding: 0 10px 10px;
 }
 
 #comic img {
 	border-radius: 10px;
+}
+
+#PW-ad-box {
+	height: 132px; 
+	background-color: white; 
+	padding: 10px; 
+	border-radius: 10px;
+	margin-bottom: 10px;
+}
+
+#PW-ad-box div {
+	height: 112px; 
+	background-color: black;
 }
