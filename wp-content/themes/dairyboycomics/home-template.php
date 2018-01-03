@@ -29,8 +29,45 @@ get_header(); ?>
 
 <div id="sidebar-right-of-comic" class="sidebar">
 	<div class="home-sidebar">
-		<div class="social-links">
-			<div style=""></div>
+		<div class="social-media row sidebar-item">
+			<div class="col-xs-6">
+				<div class="social-link"></div>
+			</div>
+			<div class="col-xs-6">
+				<div class="social-link"></div>
+			</div>
+			<div class="col-xs-6">
+				<div class="social-link"></div>
+			</div>
+			<div class="col-xs-6">
+				<div class="social-link"></div>
+			</div>
+			<div class="col-xs-6">
+				<div class="social-link"></div>
+			</div>
+			<div class="col-xs-6">
+				<div class="social-link"></div>
+			</div>
+			<div class="col-xs-6">
+				<div class="social-link"></div>
+			</div>
+			<div class="col-xs-6">
+				<div class="social-link"></div>
+			</div>
+		</div>
+		<div class="latest-stuff sidebar-item">
+			<div class="comic-preview"></div>
+			<h3>Anvil Station Stories</h3>
+			<a href="#">Read Latest</a>
+		</div>
+		<div class="latest-stuff sidebar-item">
+			<div class="comic-preview"></div>
+			<h3>Halo PWNED</h3>
+			<a href="#">Read Latest</a>
+		</div>
+		<div class="latest-stuff sidebar-item">
+			<h3>Latest News</h3>
+			<a href="#">Read More</a>
 		</div>
 	</div>
 </div>
