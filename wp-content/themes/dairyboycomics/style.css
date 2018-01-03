@@ -127,3 +127,7 @@ li.menu-item-has-children:hover ul.sub-menu {
 	height: 112px; 
 	background-color: black;
 }
+
+.home .home-sidebar {
+	width: 202px;
+}
