@@ -20,11 +20,12 @@ get_header(); ?>
 
 			$altText = get_post_meta (get_the_ID(), 'comic-hovertext', true) ?>
 			
-			<a href="<?php get_post_permalink(); ?>">
+			<a href="<?php echo get_post_permalink(); ?>">
 				<img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php echo $altText; ?>" title="<?php echo $altText; ?>">
 			</a>
 
-		<?php endwhile; endif; ?>
+		<?php endwhile; endif; 
+	?>
 </div>
 
 <div id="sidebar-right-of-comic" class="sidebar">
@@ -56,14 +57,44 @@ get_header(); ?>
 			</div>
 		</div>
 		<div class="latest-stuff sidebar-item">
-			<div class="comic-preview"></div>
-			<h3>Anvil Station Stories</h3>
-			<a href="#">Read Latest</a>
+			<?php
+				$ass = array(
+					'post_type'		=> 'comic',
+					'posts_per_page'=> 1,
+					'chapters' 		=> 'ass',
+				);
+				$query_posts = new WP_Query($ass);
+
+				if($query_posts->have_posts()) : while($query_posts->have_posts()) : $query_posts->the_post(); ?>
+
+					<a href="<?php echo get_post_permalink(); ?>">
+						<div class="comic-preview"></div>
+					</a>
+					<h3>Anvil Station Stories</h3>
+					<a href="<?php echo get_post_permalink(); ?>">Read Latest</a>
+
+			<?php endwhile; endif; ?>
 		</div>
 		<div class="latest-stuff sidebar-item">
-			<div class="comic-preview"></div>
-			<h3>Halo PWNED</h3>
-			<a href="#">Read Latest</a>
+			<?php
+				$ass = array(
+					'post_type'		=> 'comic',
+					'posts_per_page'=> 1,
+					'chapters' 		=> 'halo-pwned',
+					'meta_key' 		=> 'is_cover',
+					'meta_value' 	=> 'yes'
+				);
+				$query_posts = new WP_Query($ass);
+
+				if($query_posts->have_posts()) : while($query_posts->have_posts()) : $query_posts->the_post(); ?>
+
+					<a href="<?php echo get_post_permalink(); ?>">
+						<div class="comic-preview"></div>
+					</a>
+					<h3>Halo PWNED</h3>
+					<a href="<?php echo get_post_permalink(); ?>">Read Latest</a>
+
+			<?php endwhile; endif; ?>
 		</div>
 		<div class="latest-stuff sidebar-item">
 			<h3>Latest News</h3>
