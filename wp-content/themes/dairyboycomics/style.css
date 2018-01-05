@@ -11,11 +11,14 @@
 /*--- REMOVING SIDEBARS ---*/
 
 .single-characters #sidebar-left, .single-characters #sidebar-right,
-.archive #sidebar-left, .archive #sidebar-right {
+.archive #sidebar-left, .archive #sidebar-right,
+.home #sidebar-left, .home #sidebar-right {
 	display: none;
 }
 
-.single-characters #content-column, .archive #content-column  {
+.single-characters #content-column, 
+.archive #content-column, 
+.home #content-column  {
 	width: 100% !important;
 }
 
@@ -29,10 +32,15 @@ body {
     background-size: cover;
 }
 
+table#comic-nav-wrapper {
+	margin: 25px auto !important;
+}
+
 /*--- HEADER ---*/
 
 #header {
-	overflow: visible !important;
+	overflow: visible;
+	margin-bottom: 20px;
 }
 
 header img.logo {
@@ -55,7 +63,7 @@ header img.logo {
 ul#menu-main-menu {
     list-style-type: none;
     margin: 0;
-    padding: 0;
+    padding: 0 10px;
     background-color: #333;
     position: relative;
     width: 100%;
@@ -96,3 +104,90 @@ ul.sub-menu li {
 li.menu-item-has-children:hover ul.sub-menu {
     display: block;
 }
+
+/*--- CONTENT ---*/
+
+#content-wrapper {
+	background-color: ;
+}
+
+#comic {
+	padding: 0 10px 10px 0;
+}
+
+#comic img {
+	border-radius: 10px;
+}
+
+#PW-ad-box {
+	height: 132px; 
+	background-color: white; 
+	padding: 10px; 
+	border-radius: 10px;
+	margin-bottom: 10px;
+}
+
+#PW-ad-box div {
+	height: 112px; 
+	background-color: black;
+}
+
+.home .home-sidebar {
+	width: 202px;
+}
+
+.home .home-sidebar .sidebar-item {
+	background-color: white;
+	padding: 10px; 
+	border-radius: 10px;
+	margin-bottom: 10px;
+}
+
+.home .social-media {
+	margin-right: 0px;
+	margin-left: 0px;
+}
+
+.home .social-media .social-link {
+	width: 60px; 
+	height: 60px; 
+	background-color: black;
+	margin: 0 auto;
+	padding: 10px; 
+	border-radius: 10px;
+	margin-bottom: 10px;
+}
+
+.latest-stuff .comic-preview {
+	height: 150px;
+	border-radius: 10px;
+	background-color: black;
+}
+
+.home .home-search {
+	background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.home .home-search select, .home .home-search input {
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+.home .home-news {
+	background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.home .home-news .comic-preview {
+	height: 200px;
+}
+
+.home .home-news h2 {
+	margin-top: 0px;
+	font-size: 72px;
+}
+
