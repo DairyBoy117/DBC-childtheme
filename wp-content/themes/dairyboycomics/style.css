@@ -174,3 +174,19 @@ li.menu-item-has-children:hover ul.sub-menu {
 	width: 100%;
 	margin-bottom: 10px;
 }
+
+.home .home-news {
+	background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.home .home-news .comic-preview {
+	height: 200px;
+}
+
+.home .home-news h2 {
+	margin-top: 0px;
+	font-size: 72px;
+}
+

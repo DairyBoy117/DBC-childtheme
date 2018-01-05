@@ -109,9 +109,32 @@ get_header(); ?>
 		</div>
 	</div>
 </div>
-<div class="latest-stuff sidebar-item">
-	<h3>Latest News</h3>
-	<a href="#">Read More</a>
+<div class="latest-stuff home-news">
+	<div class="row">
+		<div class="col-xs-4">
+			<div class="comic-preview"></div>
+		</div>
+		<div class="col-xs-8">
+			<h2>What's Up?</h2>
+		</div>
+	</div>
+	<?php
+		$args = array(
+			'post_type'		=> 'post',
+			'posts_per_page'=> 1
+		);
+		$query_posts = new WP_Query($args);
+
+		if($query_posts->have_posts()) : while($query_posts->have_posts()) : $query_posts->the_post(); ?>
+
+			<h3><?php the_title(); ?></h3>
+
+			<?php the_content(); ?>
+
+			<a href="#">Read More</a>
+
+		<?php endwhile; endif; 
+	?>
 </div>
 
 <?php get_footer();
