@@ -32,6 +32,10 @@ body {
     background-size: cover;
 }
 
+table#comic-nav-wrapper {
+	margin: 25px auto !important;
+}
+
 /*--- HEADER ---*/
 
 #header {
@@ -108,7 +112,7 @@ li.menu-item-has-children:hover ul.sub-menu {
 }
 
 #comic {
-	padding: 0 10px 10px;
+	padding: 0 10px 10px 0;
 }
 
 #comic img {
@@ -158,4 +162,15 @@ li.menu-item-has-children:hover ul.sub-menu {
 	height: 150px;
 	border-radius: 10px;
 	background-color: black;
+}
+
+.home .home-search {
+	background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.home .home-search select, .home .home-search input {
+	width: 100%;
+	margin-bottom: 10px;
 }

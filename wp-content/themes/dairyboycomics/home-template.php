@@ -18,13 +18,17 @@ get_header(); ?>
 
 		if($query_posts->have_posts()) : while($query_posts->have_posts()) : $query_posts->the_post();
 
+			ceo_display_comic_navigation();
+
 			$altText = get_post_meta (get_the_ID(), 'comic-hovertext', true) ?>
 			
 			<a href="<?php echo get_post_permalink(); ?>">
 				<img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php echo $altText; ?>" title="<?php echo $altText; ?>">
 			</a>
 
-		<?php endwhile; endif; 
+			<?php ceo_display_comic_navigation();
+
+		endwhile; endif; 
 	?>
 </div>
 
@@ -96,11 +100,18 @@ get_header(); ?>
 
 			<?php endwhile; endif; ?>
 		</div>
-		<div class="latest-stuff sidebar-item">
-			<h3>Latest News</h3>
-			<a href="#">Read More</a>
+		<div class="home-search">
+			<form class="" action="<?php bloginfo('url'); ?>/comic/" method="get">
+
+				<?php include_search_form(); ?>
+
+			</form>
 		</div>
 	</div>
+</div>
+<div class="latest-stuff sidebar-item">
+	<h3>Latest News</h3>
+	<a href="#">Read More</a>
 </div>
 
 <?php get_footer();
