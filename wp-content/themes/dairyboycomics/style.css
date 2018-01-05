@@ -179,6 +179,7 @@ li.menu-item-has-children:hover ul.sub-menu {
 	background-color: white;
     padding: 30px;
     border-radius: 10px;
+    margin-bottom: 20px;
 }
 
 .home .home-news .comic-preview {

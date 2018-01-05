@@ -131,7 +131,7 @@ get_header(); ?>
 
 			<?php the_content(); ?>
 
-			<a href="#">Read More</a>
+			<a href="<?php echo site_url(); ?>/news/">Read More</a>
 
 		<?php endwhile; endif; 
 	?>
