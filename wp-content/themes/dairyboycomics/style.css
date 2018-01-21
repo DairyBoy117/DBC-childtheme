@@ -199,6 +199,12 @@ li.menu-item-has-children:hover ul.sub-menu {
 	border-radius: 10px;
 }
 
+.footer-ad ins {
+	display: block; 
+	margin: 0 auto 10px; 
+	background-color: black;
+}
+
 #footer p.copyright-info {
 	margin-bottom: 0;
 	color: #fff;
