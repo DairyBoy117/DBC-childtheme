@@ -91,7 +91,7 @@ function search_form_shortcode() {
     ob_start();
     global $wpdb; ?>
 
-    <div class='home-search'>
+    <div class="search-form">
         <h4>Search Comic Archives</h4>
 
         <form action="<?php bloginfo('url'); ?>/comic/" method="get"> 

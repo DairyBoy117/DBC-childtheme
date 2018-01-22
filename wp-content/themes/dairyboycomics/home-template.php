@@ -101,7 +101,7 @@ get_header(); ?>
 
 			<?php endwhile; endif; ?>
 		</div>
-		<div class="home-search">
+		<div class="search-form">
 			<form class="" action="<?php bloginfo('url'); ?>/comic/" method="get">
 
 				<?php include_search_form(); ?>

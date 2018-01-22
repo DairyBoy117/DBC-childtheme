@@ -167,13 +167,13 @@ li.menu-item-has-children:hover ul.sub-menu {
 	background-color: black;
 }
 
-.home-search {
+.search-form {
 	background-color: white;
     padding: 10px;
     border-radius: 10px;
 }
 
-.home-search select, .home-search input {
+.search-form select, .search-form input {
 	width: 100%;
 	margin-bottom: 10px;
 }
