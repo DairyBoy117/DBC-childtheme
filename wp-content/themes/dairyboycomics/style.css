@@ -167,13 +167,13 @@ li.menu-item-has-children:hover ul.sub-menu {
 	background-color: black;
 }
 
-.home .home-search {
+.home-search {
 	background-color: white;
     padding: 10px;
     border-radius: 10px;
 }
 
-.home .home-search select, .home .home-search input {
+.home-search select, .home-search input {
 	width: 100%;
 	margin-bottom: 10px;
 }
@@ -199,6 +199,11 @@ li.menu-item-has-children:hover ul.sub-menu {
 
 table#comic-nav-wrapper {
 	border: none !important;
+}
+
+.single-comic .widget p {
+	margin: 0;
+	padding: 0;
 }
 
 

@@ -87,7 +87,22 @@ function include_search_form() {
 }
 
 function search_form_shortcode() {
-    return include_search_form();
+
+    ob_start();
+    global $wpdb; ?>
+
+    <div class='home-search'>
+        <h4>Search Comic Archives</h4>
+
+        <form action="<?php bloginfo('url'); ?>/comic/" method="get"> 
+            <?php include_search_form() ?> 
+        </form>
+    </div>
+    
+    <?php
+    $output = apply_filters('prjkt_alert_display', ob_get_contents());
+    ob_end_clean();
+    return $output;
 }
 add_shortcode('search-form', 'search_form_shortcode');
 
