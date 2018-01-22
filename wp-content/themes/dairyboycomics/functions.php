@@ -20,6 +20,10 @@ function add_bootstrap() {
 }
 add_action( 'wp_enqueue_scripts', 'add_bootstrap' );
 
+
+add_filter('widget_text', 'do_shortcode');
+
+
 //Character Bios CPT
 
 function create_character_bios() {
@@ -81,6 +85,12 @@ add_action ('init', 'comic_taxonomy', 0);
 function include_search_form() {
     include "includes/search-form.php";
 }
+
+function search_form_shortcode() {
+    return include_search_form();
+}
+add_shortcode('search-form', 'search_form_shortcode');
+
 
 function comicpress_copyright_info() {
 	$copyright_name = comicpress_themeinfo('copyright_name');

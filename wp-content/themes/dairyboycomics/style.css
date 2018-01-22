@@ -129,6 +129,9 @@ li.menu-item-has-children:hover ul.sub-menu {
 
 #PW-ad-box div {
 	height: 112px; 
+	width: 728px;
+    display: block;
+    margin: 0 auto;
 	background-color: black;
 }
 
@@ -136,7 +139,7 @@ li.menu-item-has-children:hover ul.sub-menu {
 	width: 202px;
 }
 
-.home .home-sidebar .sidebar-item {
+.sidebar-item {
 	background-color: white;
 	padding: 10px; 
 	border-radius: 10px;
@@ -190,6 +193,14 @@ li.menu-item-has-children:hover ul.sub-menu {
 	margin-top: 0px;
 	font-size: 72px;
 }
+
+
+/*--- COMIC ---*/
+
+table#comic-nav-wrapper {
+	border: none !important;
+}
+
 
 /*--- FOOTER ---*/
 
