@@ -13,9 +13,7 @@ get_header(); ?>
 		);
 		$query_posts = new WP_Query($args);
 
-		if($query_posts->have_posts()) : while($query_posts->have_posts()) : $query_posts->the_post();
-
-			ceo_display_comic_navigation(); ?>
+		if($query_posts->have_posts()) : while($query_posts->have_posts()) : $query_posts->the_post(); ?>
 
 			<div id="PW-ad-box">
 				<div>project wonderful ad box</div>
@@ -27,7 +25,7 @@ get_header(); ?>
 				<img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php echo $altText; ?>" title="<?php echo $altText; ?>">
 			</a>
 
-			<?php ceo_display_comic_navigation();
+		<?php
 
 		endwhile; endif; 
 	?>
