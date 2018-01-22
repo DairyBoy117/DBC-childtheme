@@ -207,6 +207,11 @@ div#sidebar-left img, div#sidebar-right img  {
     margin-bottom: 10px;
 }
 
+#sidebar-over-comic .textwidget {
+	width: 78%;
+    margin: 0 auto;
+}
+
 
 /*--- SEARCH FORM ---*/
 
