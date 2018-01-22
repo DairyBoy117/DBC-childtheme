@@ -52,54 +52,67 @@
 		<div class="post-extras">
 
 			<div class="post-tags">
+
+				<?php $characters = get_field('select_characters');
 		
-				<p>
+				if ($characters) { ?>
 
-				<?php
-					
-					echo '&#9492; Characters: ';
+					<p>
 
-					$characters = get_field('select_characters');
-					$numItems = count($characters);
-					$tags = 0;
-					foreach ($characters as $character) {
-						echo '<a href="' . get_permalink($character) . '">' . get_the_title($character) . '</a>';
-						if (++$tags === $numItems) {
-							echo '';
-						} else {
-							echo ', ';
+					<?php
+						
+						echo '&#9492; Characters: ';
+						
+						$numItems = count($characters);
+						$tags = 0;
+						foreach ($characters as $character) {
+							echo '<a href="' . get_permalink($character) . '">' . get_the_title($character) . '</a>';
+							if (++$tags === $numItems) {
+								echo '';
+							} else {
+								echo ', ';
+							}
 						}
-					}
 
-				?>
+					?>
 
-				</p>
+					</p>
+
+				<?php } ?>
 
 			</div>
 
 			<div class="post-tags">
+
+				<?php $tag_terms = get_field('select_characters');
 		
-				<p>
+				if ($tag_terms) { ?>
 
-				<?php
-					
-					echo '&#9492; Tags: ';
+					<p>
 
-					$tag_terms = get_the_terms( get_the_ID(), 'post_tag');
-					$numItems = count($tag_terms);
-					$tags = 0;
-					foreach ($tag_terms as $tag_term) {
-						echo '<a href="' . get_site_url() . '/comic/?post-tag=' . $tag_term->slug . '">' . $tag_term->name . '</a>';
-						if (++$tags === $numItems) {
-							echo '';
-						} else {
-							echo ', ';
+					<?php
+						
+						echo '&#9492; Tags: ';
+
+						$tag_terms = get_the_terms( get_the_ID(), 'post_tag');
+						$numItems = count($tag_terms);
+						$tags = 0;
+						foreach ($tag_terms as $tag_term) {
+							echo '<a href="' . get_site_url() . '/comic/?post-tag=' . $tag_term->slug . '">' . $tag_term->name . '</a>';
+							if (++$tags === $numItems) {
+								echo '';
+							} else {
+								echo ', ';
+							}
 						}
-					}
 
-				?>
+					?>
 
-				</p>
+					</p>
+					
+				<?php } ?>
+		
+				
 
 			</div>
 
