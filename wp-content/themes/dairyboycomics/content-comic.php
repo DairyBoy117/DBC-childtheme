@@ -51,12 +51,17 @@
 		</div>
 		<div class="post-extras">
 
-			<div class="post-tags">
 
-				<?php $characters = get_field('select_characters');
-		
-				if ($characters) { ?>
 
+			<?php 
+
+			$characters = get_field('select_characters');
+			
+
+			if ($characters) { ?>
+
+				<div class="post-tags">
+			
 					<p>
 
 					<?php
@@ -78,23 +83,23 @@
 
 					</p>
 
-				<?php } ?>
+				</div>
 
-			</div>
+			<?php }
 
-			<div class="post-tags">
+			$tag_terms = get_the_terms( get_the_ID(), 'post_tag');
 
-				<?php $tag_terms = get_field('select_characters');
+			if ($tag_terms) { ?>
+
+				<div class="post-tags">
 		
-				if ($tag_terms) { ?>
-
 					<p>
 
 					<?php
 						
 						echo '&#9492; Tags: ';
 
-						$tag_terms = get_the_terms( get_the_ID(), 'post_tag');
+						
 						$numItems = count($tag_terms);
 						$tags = 0;
 						foreach ($tag_terms as $tag_term) {
@@ -109,14 +114,10 @@
 					?>
 
 					</p>
-					
-				<?php } ?>
-		
-				
 
-			</div>
+				</div>
 
-				<?php
+			<?php }
 
 				do_action('comicpress-post-extras');
 				do_action('comic-post-extras');

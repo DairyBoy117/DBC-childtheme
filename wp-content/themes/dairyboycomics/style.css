@@ -200,7 +200,7 @@ div#sidebar-left img, div#sidebar-right img  {
 	margin: 0 auto 25px;
 }
 
-#content-column {
+.single-comic #content-column {
 	background-color: #fff;
     padding: 10px;
     border-radius: 10px;
@@ -217,7 +217,7 @@ div#sidebar-left img, div#sidebar-right img  {
 }
 
 .search-form h4 {
-
+	text-align: center;
 }
 
 .search-form select, .search-form input {
