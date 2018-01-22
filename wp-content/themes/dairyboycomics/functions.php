@@ -93,7 +93,6 @@ function search_form_shortcode() {
 
     <div class="search-form">
         <h4>Search Comic Archives</h4>
-
         <form action="<?php bloginfo('url'); ?>/comic/" method="get"> 
             <?php include_search_form() ?> 
         </form>

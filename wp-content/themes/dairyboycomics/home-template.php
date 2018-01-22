@@ -102,6 +102,7 @@ get_header(); ?>
 			<?php endwhile; endif; ?>
 		</div>
 		<div class="search-form">
+			<h4>Search Comic Archives</h4>
 			<form class="" action="<?php bloginfo('url'); ?>/comic/" method="get">
 
 				<?php include_search_form(); ?>
