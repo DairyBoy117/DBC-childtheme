@@ -167,17 +167,6 @@ li.menu-item-has-children:hover ul.sub-menu {
 	background-color: black;
 }
 
-.search-form {
-	background-color: white;
-    padding: 10px;
-    border-radius: 10px;
-}
-
-.search-form select, .search-form input {
-	width: 100%;
-	margin-bottom: 10px;
-}
-
 .home .home-news {
 	background-color: white;
     padding: 30px;
@@ -204,6 +193,36 @@ table#comic-nav-wrapper {
 .single-comic .widget p {
 	margin: 0;
 	padding: 0;
+}
+
+div#sidebar-left img, div#sidebar-right img  {
+	display: block;
+	margin: 0 auto 25px;
+}
+
+#content-column {
+	background-color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+
+/*--- SEARCH FORM ---*/
+
+.search-form {
+	background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.search-form h4 {
+
+}
+
+.search-form select, .search-form input {
+	width: 100%;
+	margin-bottom: 10px;
 }
 
 
