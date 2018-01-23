@@ -5,9 +5,6 @@ Template Name: Home
 get_header(); ?>
 
 <div id="comic">
-	<div id="PW-ad-box">
-		<div>project wonderful ad box</div>
-	</div>
 	<?php
 		$args = array(
 			'post_type'		=> 'comic',
@@ -16,17 +13,19 @@ get_header(); ?>
 		);
 		$query_posts = new WP_Query($args);
 
-		if($query_posts->have_posts()) : while($query_posts->have_posts()) : $query_posts->the_post();
+		if($query_posts->have_posts()) : while($query_posts->have_posts()) : $query_posts->the_post(); ?>
 
-			ceo_display_comic_navigation();
+			<div id="PW-ad-box">
+				<div>project wonderful ad box</div>
+			</div>
 
-			$altText = get_post_meta (get_the_ID(), 'comic-hovertext', true) ?>
+			<?php $altText = get_post_meta (get_the_ID(), 'comic-hovertext', true) ?>
 			
 			<a href="<?php echo get_post_permalink(); ?>">
 				<img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php echo $altText; ?>" title="<?php echo $altText; ?>">
 			</a>
 
-			<?php ceo_display_comic_navigation();
+		<?php
 
 		endwhile; endif; 
 	?>
@@ -100,7 +99,8 @@ get_header(); ?>
 
 			<?php endwhile; endif; ?>
 		</div>
-		<div class="home-search">
+		<div class="search-form">
+			<h4>Search Comic Archives</h4>
 			<form class="" action="<?php bloginfo('url'); ?>/comic/" method="get">
 
 				<?php include_search_form(); ?>

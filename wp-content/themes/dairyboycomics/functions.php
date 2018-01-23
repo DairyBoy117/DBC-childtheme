@@ -20,6 +20,10 @@ function add_bootstrap() {
 }
 add_action( 'wp_enqueue_scripts', 'add_bootstrap' );
 
+
+add_filter('widget_text', 'do_shortcode');
+
+
 //Character Bios CPT
 
 function create_character_bios() {
@@ -81,6 +85,26 @@ add_action ('init', 'comic_taxonomy', 0);
 function include_search_form() {
     include "includes/search-form.php";
 }
+
+function search_form_shortcode() {
+
+    ob_start();
+    global $wpdb; ?>
+
+    <div class="search-form">
+        <h4>Search Comic Archives</h4>
+        <form action="<?php bloginfo('url'); ?>/comic/" method="get"> 
+            <?php include_search_form() ?> 
+        </form>
+    </div>
+    
+    <?php
+    $output = apply_filters('prjkt_alert_display', ob_get_contents());
+    ob_end_clean();
+    return $output;
+}
+add_shortcode('search-form', 'search_form_shortcode');
+
 
 function comicpress_copyright_info() {
 	$copyright_name = comicpress_themeinfo('copyright_name');

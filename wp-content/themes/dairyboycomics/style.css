@@ -44,7 +44,7 @@ table#comic-nav-wrapper {
 }
 
 header img.logo {
-	height: 150px;
+	height: 180px;
     margin: 0 auto;
     display: block;
 }
@@ -58,6 +58,8 @@ header img.logo {
 .random-banner {
 	display: block;
 	margin: 0 auto;
+	height: 117px;
+	width: 740px;
 }
 
 ul#menu-main-menu {
@@ -129,6 +131,9 @@ li.menu-item-has-children:hover ul.sub-menu {
 
 #PW-ad-box div {
 	height: 112px; 
+	width: 728px;
+    display: block;
+    margin: 0 auto;
 	background-color: black;
 }
 
@@ -136,7 +141,7 @@ li.menu-item-has-children:hover ul.sub-menu {
 	width: 202px;
 }
 
-.home .home-sidebar .sidebar-item {
+.sidebar-item {
 	background-color: white;
 	padding: 10px; 
 	border-radius: 10px;
@@ -164,17 +169,6 @@ li.menu-item-has-children:hover ul.sub-menu {
 	background-color: black;
 }
 
-.home .home-search {
-	background-color: white;
-    padding: 10px;
-    border-radius: 10px;
-}
-
-.home .home-search select, .home .home-search input {
-	width: 100%;
-	margin-bottom: 10px;
-}
-
 .home .home-news {
 	background-color: white;
     padding: 30px;
@@ -190,6 +184,87 @@ li.menu-item-has-children:hover ul.sub-menu {
 	margin-top: 0px;
 	font-size: 72px;
 }
+
+
+/*--- COMIC ---*/
+
+table#comic-nav-wrapper {
+	border: none !important;
+}
+
+.single-comic .widget p {
+	margin: 0;
+	padding: 0;
+}
+
+div#sidebar-left img, div#sidebar-right img  {
+	display: block;
+	margin: 0 auto 25px;
+}
+
+.single-comic #content-column {
+	background-color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+#sidebar-over-comic .textwidget {
+	width: 78%;
+    margin: 0 auto;
+}
+
+
+/*--- COMIC NAVIGATION---*/
+
+.navi-first {
+	background: url('img/nav/prev-in.png') no-repeat !important;
+}
+
+.navi-prev-in {
+	background: url('img/nav/prev-in.png') no-repeat !important;
+}
+
+.navi-random {
+	background: url('img/nav/prev-in.png') no-repeat !important;
+}
+
+.navi-next-in {
+	background: url('img/nav/prev-in.png') no-repeat !important;
+}
+
+.navi-last {
+	background: url('img/nav/prev-in.png') no-repeat !important;
+}
+
+a.navi {
+    margin: 0 25px;
+    width: 100px;
+    height: 100px;
+}
+
+.comic_navi {
+	margin: 0 auto 10px !important;
+}
+
+
+/*--- SEARCH FORM ---*/
+
+.search-form {
+	background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.search-form h4 {
+	text-align: center;
+}
+
+.search-form select, .search-form input {
+	width: 100%;
+	margin-bottom: 10px;
+}
+
 
 /*--- FOOTER ---*/
 
