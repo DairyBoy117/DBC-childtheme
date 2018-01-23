@@ -44,7 +44,7 @@ table#comic-nav-wrapper {
 }
 
 header img.logo {
-	height: 150px;
+	height: 180px;
     margin: 0 auto;
     display: block;
 }
@@ -58,6 +58,8 @@ header img.logo {
 .random-banner {
 	display: block;
 	margin: 0 auto;
+	height: 117px;
+	width: 740px;
 }
 
 ul#menu-main-menu {
