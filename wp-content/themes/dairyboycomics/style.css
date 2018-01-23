@@ -213,6 +213,39 @@ div#sidebar-left img, div#sidebar-right img  {
 }
 
 
+/*--- COMIC NAVIGATION---*/
+
+.navi-first {
+	background: url('img/nav/prev-in.png') no-repeat !important;
+}
+
+.navi-prev-in {
+	background: url('img/nav/prev-in.png') no-repeat !important;
+}
+
+.navi-random {
+	background: url('img/nav/prev-in.png') no-repeat !important;
+}
+
+.navi-next-in {
+	background: url('img/nav/prev-in.png') no-repeat !important;
+}
+
+.navi-last {
+	background: url('img/nav/prev-in.png') no-repeat !important;
+}
+
+a.navi {
+    margin: 0 25px;
+    width: 100px;
+    height: 100px;
+}
+
+.comic_navi {
+	margin: 0 auto 10px !important;
+}
+
+
 /*--- SEARCH FORM ---*/
 
 .search-form {
