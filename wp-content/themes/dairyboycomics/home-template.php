@@ -29,8 +29,7 @@ get_header(); ?>
 
 		endwhile; endif; 
 	?>
-	<h3>Jump to...</h3>
-	<div class="row">
+	<div class="row prev-links">
 		<div class="col-xs-3">
 			<div class="prev-comics" id="beginning">
 				<?php
@@ -45,7 +44,7 @@ get_header(); ?>
 					if($query_posts->have_posts()) : while($query_posts->have_posts()) : $query_posts->the_post(); ?>
 
 						<a href="<?php echo get_post_permalink(); ?>">
-							Beginning
+							<img src="<?php echo get_stylesheet_directory_uri() ?>/img/nav/prev-in.png" alt="jump to beginning of comic" title="jump to beginning of comic">	
 						</a>
 
 				<?php endwhile; endif; ?>
@@ -65,7 +64,7 @@ get_header(); ?>
 					if($query_posts->have_posts()) : while($query_posts->have_posts()) : $query_posts->the_post(); ?>
 
 						<a href="<?php echo get_post_permalink(); ?>">
-							Previous Comic
+							<img src="<?php echo get_stylesheet_directory_uri() ?>/img/nav/prev-in.png" alt="jump to previous comic" title="jump to previous comic">	
 						</a>
 
 				<?php endwhile; endif; ?>
@@ -86,7 +85,7 @@ get_header(); ?>
 					if($query_posts->have_posts()) : while($query_posts->have_posts()) : $query_posts->the_post(); ?>
 
 						<a href="<?php echo get_post_permalink(); ?>">
-							Canto Start
+							<img src="<?php echo get_stylesheet_directory_uri() ?>/img/nav/prev-in.png" alt="jump to Canto start" title="jump to Canto start">	
 						</a>
 
 				<?php endwhile; endif; ?>
@@ -95,7 +94,7 @@ get_header(); ?>
 		<div class="col-xs-3">
 			<div class="prev-comics" id="archive">
 				<a href="<?php site_url(); ?>/comics/?series=austins-inferno">
-					Archive
+					<img src="<?php echo get_stylesheet_directory_uri() ?>/img/nav/prev-in.png" alt="go to Archive" title="go to Archive">	
 				</a>
 			</div>
 		</div>
