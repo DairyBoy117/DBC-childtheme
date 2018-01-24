@@ -105,28 +105,60 @@ get_header(); ?>
 	<div class="home-sidebar">
 		<div class="social-media row sidebar-item">
 			<div class="col-xs-6">
-				<div class="social-link"></div>
+				<div class="social-link">
+					<a href="http://www.comicchameleon.com/">
+						<img src="<?php echo get_stylesheet_directory_uri() ?>/img/social/sm-fb.png" alt="comic chameleon">
+					</a>
+				</div>
 			</div>
 			<div class="col-xs-6">
-				<div class="social-link"></div>
+				<div class="social-link">
+					<a href="https://www.facebook.com/WebcomicAvenue/">
+						<img src="<?php echo get_stylesheet_directory_uri() ?>/img/social/sm-fb.png" alt="webcomic avenue">
+					</a>
+				</div>
 			</div>
 			<div class="col-xs-6">
-				<div class="social-link"></div>
+				<div class="social-link">
+					<a href="https://www.facebook.com/DairyBoyComicsPage/">
+						<img src="<?php echo get_stylesheet_directory_uri() ?>/img/social/sm-fb.png" alt="facebook">
+					</a>
+				</div>
 			</div>
 			<div class="col-xs-6">
-				<div class="social-link"></div>
+				<div class="social-link">
+					<a href="https://twitter.com/DairyBoyComics">
+						<img src="<?php echo get_stylesheet_directory_uri() ?>/img/social/sm-fb.png" alt="twitter">
+					</a>
+				</div>
 			</div>
 			<div class="col-xs-6">
-				<div class="social-link"></div>
+				<div class="social-link">
+					<a href="https://www.youtube.com/watch?v=mNFx28NGLfI">
+						<img src="<?php echo get_stylesheet_directory_uri() ?>/img/social/sm-fb.png" alt="shrek">
+					</a>
+				</div>
 			</div>
 			<div class="col-xs-6">
-				<div class="social-link"></div>
+				<div class="social-link">
+					<a href="https://dairyboycomics.deviantart.com/">
+						<img src="<?php echo get_stylesheet_directory_uri() ?>/img/social/sm-fb.png" alt="deviant art">
+					</a>
+				</div>
 			</div>
 			<div class="col-xs-6">
-				<div class="social-link"></div>
+				<div class="social-link">
+					<a href="https://anvilstation.com/">
+						<img src="<?php echo get_stylesheet_directory_uri() ?>/img/social/sm-fb.png" alt="anvil station">
+					</a>
+				</div>
 			</div>
 			<div class="col-xs-6">
-				<div class="social-link"></div>
+				<div class="social-link">
+					<a href="<?php site_url(); ?>/feed/">
+						<img src="<?php echo get_stylesheet_directory_uri() ?>/img/social/sm-fb.png" alt="rss">
+					</a>
+				</div>
 			</div>
 		</div>
 		<div class="latest-stuff sidebar-item">

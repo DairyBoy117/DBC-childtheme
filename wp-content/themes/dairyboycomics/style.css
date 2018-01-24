@@ -151,15 +151,13 @@ li.menu-item-has-children:hover ul.sub-menu {
 .home .social-media {
 	margin-right: 0px;
 	margin-left: 0px;
+	background: none;
 }
 
-.home .social-media .social-link {
+.home .social-media .social-link img {
 	width: 60px; 
 	height: 60px; 
-	background-color: black;
 	margin: 0 auto;
-	padding: 10px; 
-	border-radius: 10px;
 	margin-bottom: 10px;
 }
 
