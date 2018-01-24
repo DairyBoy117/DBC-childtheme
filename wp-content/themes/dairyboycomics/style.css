@@ -151,20 +151,19 @@ li.menu-item-has-children:hover ul.sub-menu {
 .home .social-media {
 	margin-right: 0px;
 	margin-left: 0px;
+	background: none;
 }
 
-.home .social-media .social-link {
+.home .social-media .social-link img {
 	width: 60px; 
 	height: 60px; 
-	background-color: black;
 	margin: 0 auto;
-	padding: 10px; 
-	border-radius: 10px;
 	margin-bottom: 10px;
 }
 
-.latest-stuff .comic-preview {
+.latest-stuff .comic-preview img {
 	height: 150px;
+	width: 180px;
 	border-radius: 10px;
 	background-color: black;
 }
@@ -176,8 +175,10 @@ li.menu-item-has-children:hover ul.sub-menu {
     margin-bottom: 20px;
 }
 
-.home .home-news .comic-preview {
+.home .home-news .comic-preview img {
 	height: 200px;
+	width: 286px;
+	background-color: black;
 }
 
 .home .home-news h2 {
