@@ -135,7 +135,7 @@ get_header(); ?>
 			<div class="col-xs-6">
 				<div class="social-link">
 					<a href="https://www.youtube.com/watch?v=mNFx28NGLfI">
-						<img src="<?php echo get_stylesheet_directory_uri() ?>/img/social/sm-fb.png" alt="shrek">
+						<img src="<?php echo get_stylesheet_directory_uri() ?>/img/social/sm-fb.png" alt="shrek souls">
 					</a>
 				</div>
 			</div>
@@ -173,7 +173,9 @@ get_header(); ?>
 				if($query_posts->have_posts()) : while($query_posts->have_posts()) : $query_posts->the_post(); ?>
 
 					<a href="<?php echo get_post_permalink(); ?>">
-						<div class="comic-preview"></div>
+						<div class="comic-preview">
+							<img src="<?php echo get_stylesheet_directory_uri() ?>/img/ai-logo.png" alt="Anvil Station Stories">
+						</div>
 					</a>
 					<h3>Anvil Station Stories</h3>
 					<a href="<?php echo get_post_permalink(); ?>">Read Latest</a>
@@ -194,7 +196,9 @@ get_header(); ?>
 				if($query_posts->have_posts()) : while($query_posts->have_posts()) : $query_posts->the_post(); ?>
 
 					<a href="<?php echo get_post_permalink(); ?>">
-						<div class="comic-preview"></div>
+						<div class="comic-preview">
+							<img src="<?php echo get_stylesheet_directory_uri() ?>/img/ai-logo.png" alt="Halo PWNED">
+						</div>
 					</a>
 					<h3>Halo PWNED</h3>
 					<a href="<?php echo get_post_permalink(); ?>">Read Latest</a>
@@ -214,7 +218,9 @@ get_header(); ?>
 <div class="latest-stuff home-news">
 	<div class="row">
 		<div class="col-xs-4">
-			<div class="comic-preview"></div>
+			<div class="comic-preview">
+				<img src="<?php echo get_stylesheet_directory_uri() ?>/img/ai-logo.png" alt="What's up?">
+			</div>
 		</div>
 		<div class="col-xs-8">
 			<h2>What's Up?</h2>
