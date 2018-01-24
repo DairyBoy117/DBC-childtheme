@@ -32,28 +32,68 @@ get_header(); ?>
 	<h3>Jump to...</h3>
 	<div class="row">
 		<div class="col-xs-3">
-			<div class="prev-comics" id="">
-				<a href="">
-					Beginning
-				</a>
+			<div class="prev-comics" id="beginning">
+				<?php
+					$ass = array(
+						'post_type'		=> 'comic',
+						'order'			=> 'ASC',
+						'posts_per_page'=> 1,
+						'chapters' 		=> 'austins-inferno',
+					);
+					$query_posts = new WP_Query($ass);
+
+					if($query_posts->have_posts()) : while($query_posts->have_posts()) : $query_posts->the_post(); ?>
+
+						<a href="<?php echo get_post_permalink(); ?>">
+							Beginning
+						</a>
+
+				<?php endwhile; endif; ?>
 			</div>
 		</div>
 		<div class="col-xs-3">
-			<div class="prev-comics">
-				<a href="">
-					Previous Comic
-				</a>
+			<div class="prev-comics" id="previous">
+				<?php
+					$ass = array(
+						'post_type'		=> 'comic',
+						'posts_per_page'=> 1,
+						'chapters' 		=> 'austins-inferno',
+						'offset'		=> 1
+					);
+					$query_posts = new WP_Query($ass);
+
+					if($query_posts->have_posts()) : while($query_posts->have_posts()) : $query_posts->the_post(); ?>
+
+						<a href="<?php echo get_post_permalink(); ?>">
+							Previous Comic
+						</a>
+
+				<?php endwhile; endif; ?>
 			</div>
 		</div>
 		<div class="col-xs-3">
-			<div class="prev-comics">
-				<a href="">
-					Canto Start
-				</a>
+			<div class="prev-comics" id="canto">
+				<?php
+					$ass = array(
+						'post_type'		=> 'comic',
+						'posts_per_page'=> 1,
+						'chapters' 		=> 'austins-inferno',
+						'meta_key' 		=> 'is_cover',
+						'meta_value' 	=> 'yes'
+					);
+					$query_posts = new WP_Query($ass);
+
+					if($query_posts->have_posts()) : while($query_posts->have_posts()) : $query_posts->the_post(); ?>
+
+						<a href="<?php echo get_post_permalink(); ?>">
+							Canto Start
+						</a>
+
+				<?php endwhile; endif; ?>
 			</div>
 		</div>
 		<div class="col-xs-3">
-			<div class="prev-comics">
+			<div class="prev-comics" id="archive">
 				<a href="<?php site_url(); ?>/comics/?series=austins-inferno">
 					Archive
 				</a>
