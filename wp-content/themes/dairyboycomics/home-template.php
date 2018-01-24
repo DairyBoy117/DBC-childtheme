@@ -29,6 +29,37 @@ get_header(); ?>
 
 		endwhile; endif; 
 	?>
+	<h3>Jump to...</h3>
+	<div class="row">
+		<div class="col-xs-3">
+			<div class="prev-comics" id="">
+				<a href="">
+					Beginning
+				</a>
+			</div>
+		</div>
+		<div class="col-xs-3">
+			<div class="prev-comics">
+				<a href="">
+					Previous Comic
+				</a>
+			</div>
+		</div>
+		<div class="col-xs-3">
+			<div class="prev-comics">
+				<a href="">
+					Canto Start
+				</a>
+			</div>
+		</div>
+		<div class="col-xs-3">
+			<div class="prev-comics">
+				<a href="<?php site_url(); ?>/comics/?series=austins-inferno">
+					Archive
+				</a>
+			</div>
+		</div>
+	</div>
 </div>
 
 <div id="sidebar-right-of-comic" class="sidebar">
@@ -131,7 +162,7 @@ get_header(); ?>
 
 			<?php the_content(); ?>
 
-			<a href="<?php echo site_url(); ?>/news/">Read More</a>
+			<a href="<?php site_url(); ?>/news/">Read More</a>
 
 		<?php endwhile; endif; 
 	?>
