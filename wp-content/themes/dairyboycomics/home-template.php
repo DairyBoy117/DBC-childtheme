@@ -134,7 +134,7 @@ get_header(); ?>
 			</div>
 			<div class="col-xs-6">
 				<div class="social-link">
-					<a href="https://www.youtube.com/watch?v=mNFx28NGLfI">
+					<a href="<?php site_url(); ?>/shrek-it-up/">
 						<img src="<?php echo get_stylesheet_directory_uri() ?>/img/social/sm-fb.png" alt="shrek souls">
 					</a>
 				</div>
