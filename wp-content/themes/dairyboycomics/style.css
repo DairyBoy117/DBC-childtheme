@@ -272,6 +272,13 @@ a.navi, span.navi-void {
 body.page-template-shrek-souls {
 	background: none;
 	background-color: #000;
+	position: relative;
+}
+
+.page-template-shrek-souls a {
+	position: absolute;
+	left: 0;
+	top: 0;
 }
 
 .page-template-shrek-souls img {

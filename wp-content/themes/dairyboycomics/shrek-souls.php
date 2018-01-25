@@ -20,6 +20,13 @@ Template Name: Shrek Souls
 
 	<?php the_post_thumbnail(); ?>
 
+	<audio id="shrekSong" src="<?php echo get_stylesheet_directory_uri() ?>/media/Im_On_My_Way.mp3" autoplay></audio>
+	
+	<script>
+	  var audio = document.getElementById("shrekSong");
+	  audio.volume = 0.1;
+	</script>
+
 <?php wp_footer(); ?>
 </body>
 </html>
