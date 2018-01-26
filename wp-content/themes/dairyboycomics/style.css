@@ -276,9 +276,15 @@ body.page-template-shrek-souls {
 }
 
 .page-template-shrek-souls a {
+	color: #fff;
 	position: absolute;
 	left: 0;
-	top: 0;
+	bottom: 0;
+}
+
+.page-template-shrek-souls a:hover {
+	color: #fff;
+	text-decoration: none;
 }
 
 .page-template-shrek-souls img {
