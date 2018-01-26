@@ -8,6 +8,7 @@
  Version:      1.0.0
 */
 
+
 /*--- REMOVING SIDEBARS ---*/
 
 .single-characters #sidebar-left, .single-characters #sidebar-right,
@@ -16,12 +17,15 @@
 	display: none;
 }
 
+.page-archives #sidebar-left, .page-archives #sidebar-right {
+	display: none;
+}
+
 .single-characters #content-column, 
 .archive #content-column, 
 .home #content-column  {
 	width: 100% !important;
 }
-
 
 /*--- BODY ---*/
 
@@ -107,11 +111,7 @@ li.menu-item-has-children:hover ul.sub-menu {
     display: block;
 }
 
-/*--- CONTENT ---*/
-
-#content-wrapper {
-	background-color: ;
-}
+/*--- HOME PAGE ---*/
 
 #comic {
 	padding: 0 10px 10px 0;
@@ -184,6 +184,41 @@ li.menu-item-has-children:hover ul.sub-menu {
 .home .home-news h2 {
 	margin-top: 0px;
 	font-size: 72px;
+}
+
+
+/*--- CONTENT ---*/
+
+.page-template-template-select #content-wrapper, 
+.page-template-template-select #content-wrapper {
+	background-color: #fff;
+	border-radius: 10px;
+	margin-bottom: 10px;
+	padding: 10px;
+}
+
+.series-logo {
+	width: 100%;
+}
+
+.comic-img img {
+	max-width: 100%;
+}
+
+.comic-series {
+	padding: 10px 0;
+}
+
+.comic-series a {
+    font-size: 22px;
+    /* margin: 0 auto; */
+    /* display: block; */
+}
+
+.divide {
+	height: 1px;
+	background: #717171;
+	border-bottom: 1px solid #E0E0E0;
 }
 
 
@@ -315,3 +350,4 @@ body.page-template-shrek-souls {
 #footer a {
 	color: #337ab7;
 }
+
