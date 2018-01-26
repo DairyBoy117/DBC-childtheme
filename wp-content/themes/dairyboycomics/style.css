@@ -209,6 +209,12 @@ li.menu-item-has-children:hover ul.sub-menu {
 	padding: 10px 0;
 }
 
+.comic-series a {
+    font-size: 22px;
+    /* margin: 0 auto; */
+    /* display: block; */
+}
+
 .divide {
 	height: 1px;
 	background: #717171;

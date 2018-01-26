@@ -60,7 +60,7 @@ get_header(); ?>
 			<div class="col-xs-6">
 				<div class="comic-img">
 					<a href="<?php site_url(); ?>/comics/?series=austins-inferno">
-						<img src="<?php echo get_stylesheet_directory_uri() ?>/img/ai-logo.png" alt="Austin's Inferno">
+						<img src="<?php echo get_stylesheet_directory_uri() ?>/img/ai-logo.png" alt="Austin's Inferno" height="358">
 					</a>
 				</div>
 			</div>
@@ -74,7 +74,7 @@ get_header(); ?>
 			<div class="col-xs-6">
 				<div class="comic-img">
 					<a href="<?php site_url(); ?>/comics/?series=ass">
-						<img src="<?php echo get_stylesheet_directory_uri() ?>/img/ai-logo.png" alt="Anvil Station Stories">					
+						<img src="<?php echo get_stylesheet_directory_uri() ?>/img/ai-logo.png" alt="Anvil Station Stories" height="358">
 					</a>
 				</div>
 			</div>
@@ -188,7 +188,7 @@ get_header(); ?>
 			<div class="col-xs-6">
 				<div class="comic-img">
 					<a href="<?php site_url(); ?>/comics/?series=halo-pwned">
-						<img src="<?php echo get_stylesheet_directory_uri() ?>/img/ai-logo.png" alt="Halo PWNED">
+						<img src="<?php echo get_stylesheet_directory_uri() ?>/img/ai-logo.png" alt="Halo PWNED" height="358">
 					</a>
 				</div>
 			</div>
