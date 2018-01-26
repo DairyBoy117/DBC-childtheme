@@ -179,6 +179,10 @@ li.menu-item-has-children:hover ul.sub-menu {
 	padding: 10px;
 }
 
+.comic-img img {
+	max-width: 100%;
+}
+
 
 /*--- COMIC ---*/
 
