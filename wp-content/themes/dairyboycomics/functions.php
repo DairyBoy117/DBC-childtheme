@@ -109,6 +109,7 @@ function search_form_shortcode() {
 }
 add_shortcode('search-form', 'search_form_shortcode');
 
+//Footer Copyright
 
 function comicpress_copyright_info() {
 	$copyright_name = comicpress_themeinfo('copyright_name');
@@ -126,7 +127,7 @@ function comicpress_copyright_text() {
 	$output .= "<br>";
 	$output .= "You can only be absolved of this contract by filming yourself doing the taco dance and uploading it to youtube.";
 	$output .= "<br>";
-	$output .= __( 'Powered by', 'comicpress' ) . " <a href=\"http://wordpress.org/\">WordPress</a> " . __( 'with', 'comicpress' ). " <a href=\"http://frumph.net\">ComicPress</a>\r\n";
+	$output .= "<a href=\"http://frumph.net\">ComicPress</a> Child Theme by Austin Verburg\r\n";
 	$output .= comicpress_hosted_on();
 	$output .= "<span class=\"footer-subscribe\">";
 		$output .= "<span class=\"footer-pipe\">|</span> ";
