@@ -125,9 +125,9 @@ function comicpress_copyright_text() {
 	$output .= comicpress_copyright_info();
 	$output .= ", All Rights Reserved. By reading this text, you are legally agreeing to buy me tacos.";
 	$output .= "<br>";
-	$output .= "You can only be absolved of this contract by filming yourself doing the taco dance and uploading it to youtube.";
+	$output .= "You can only be absolved of this contract by filming yourself <a href='https://www.youtube.com/watch?v=DOLQHE6fwj0'>doing the taco dance</a> and uploading it to youtube.";
 	$output .= "<br>";
-	$output .= "<a href=\"http://frumph.net\">ComicPress</a> Child Theme by Austin Verburg\r\n";
+	$output .= "<a href=\"http://frumph.net\">ComicPress</a> child theme by Austin Verburg\r\n";
 	$output .= comicpress_hosted_on();
 	$output .= "<span class=\"footer-subscribe\">";
 		$output .= "<span class=\"footer-pipe\">|</span> ";
