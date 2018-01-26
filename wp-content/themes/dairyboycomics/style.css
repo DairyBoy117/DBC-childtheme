@@ -267,6 +267,32 @@ a.navi, span.navi-void {
 }
 
 
+/*--- SHREK ---*/
+
+body.page-template-shrek-souls {
+	background: none;
+	background-color: #000;
+	position: relative;
+}
+
+.page-template-shrek-souls a {
+	color: #fff;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+
+.page-template-shrek-souls a:hover {
+	color: #fff;
+	text-decoration: none;
+}
+
+.page-template-shrek-souls img {
+	display: block;
+	margin: 0 auto;
+}
+
+
 /*--- FOOTER ---*/
 
 #footer {
