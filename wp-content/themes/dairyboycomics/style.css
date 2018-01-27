@@ -260,6 +260,37 @@ li.menu-item-has-children:hover ul.sub-menu {
 	background-color: #808080;
 }
 
+.comic-chapters {
+	padding: 10px;
+}
+
+.comic-chapters h3 {
+	text-align: center;
+    margin: 5px 0 0;
+}
+
+.comic-chapters h3 a {
+	font-size: 24px;
+}
+
+.comic-chapters img {
+	display: block;
+	margin: 0 auto;
+	max-width: 80%;
+}
+
+.comic-chapters p {
+	text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.comic-chapters ul {
+	text-align: center;
+	list-style: none;
+	padding-left: 0;
+}
+
 
 /*--- COMIC ---*/
 
