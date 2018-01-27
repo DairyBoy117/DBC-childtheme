@@ -211,7 +211,7 @@ li.menu-item-has-children:hover ul.sub-menu {
 }
 
 .comic-series {
-	padding: 10px 0;
+	padding: 10px;
 }
 
 .comic-series a {
@@ -262,6 +262,10 @@ li.menu-item-has-children:hover ul.sub-menu {
 
 .comic-chapters {
 	padding: 10px;
+}
+
+.comic-chapters .row {
+	padding: 10px 0;
 }
 
 .comic-chapters h3 {

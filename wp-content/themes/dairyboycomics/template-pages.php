@@ -4,70 +4,74 @@ Template Name: Chapter Pages
 */
 get_header(); ?>
 
-	<form class="" action="<?php bloginfo('url'); ?>/comic/" method="get">
-		<?php include_search_form(); ?>
-	</form>
+	<div class="content-block search-form">
+		<h3>Search Archive</h3>
+		<form class="" action="<?php bloginfo('url'); ?>/comic/" method="get">
+			<?php include_search_form(); ?>
+			<div class="clearleft"></div>
+		</form>
+	</div>
 
-	<?php
+	<div class="content-block archive-select">
+		<div class="comic-chapters">
+			<?php
 
-	$chapter = $_GET['title'];
+			$chapter = $_GET['title'];
+			
+			$args = array(
+						'post_type'		=> 'comic',
+						'order'			=> 'ASC',
+						'posts_per_page'=> -1,
+						'chapters' 		=> $chapter,
+					);
+			$category_posts = new WP_Query($args);
 
-	if ($comic == 'all') {
-		$comic = '';
-	}
-	
-	$args = array(
-				'post_type'		=> 'comic',
-				'order'			=> 'ASC',
-				'posts_per_page'=> -1,
-				'chapters' 		=> $chapter,
-			);
-	$category_posts = new WP_Query($args);
+			if($category_posts->have_posts()) : 
 
-	if($category_posts->have_posts()) : 
+				$x = 0 ?>
+			
+				<div class="row">
 
-		$x = 0 ?>
-	
-		<div class="row">
+			    <?php while($category_posts->have_posts()) : 
+			        $category_posts->the_post();
 
-	    <?php while($category_posts->have_posts()) : 
-	        $category_posts->the_post();
+						if ($x == 4) { ?>
+							</div>
+							<div class="row">
+						<?php }
 
-				if ($x == 4) { ?>
-					</div>
-					<div class="row">
-				<?php }
+						$x++; ?>
 
-				$x++; ?>
+						<div class="col-xs-3">
 
-				<div class="col-xs-3">
+							<a href="<?php echo the_permalink(); ?>">
+								<img src="<?php echo the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>">						
+							</a>
 
-					<a href="<?php echo the_permalink(); ?>">
-						<img src="<?php echo the_post_thumbnail_url( 'thumbnail' ); ?>" alt="<?php the_title(); ?>">						
-					</a>
+							<p>
+								<a href="<?php echo the_permalink(); ?>"><?php the_title(); ?></a>		
+							</p>
 
-					<p>
-						<a href="<?php echo the_permalink(); ?>"><?php the_title(); ?></a>		
-					</p>
+							<p>
+								<?php echo get_the_date(); ?>
+							</p>
 
-					<p>
-						<?php echo get_the_date(); ?>
-					</p>
+			            </div>
 
-	            </div>
+				<?php endwhile; ?>
 
-		<?php endwhile; ?>
+			    </div>
 
-	    </div>
+			<?php else: ?>
 
-	<?php else: ?>
+			    Oops, there are no posts.
 
-	    Oops, there are no posts.
+			<?php
+			endif;
 
-	<?php
-	endif;
+			wp_reset_postdata();
+			wp_reset_query(); ?>
+		</div>		
+	</div>
 
-	wp_reset_postdata();
-	wp_reset_query();
-
-get_footer();
+<?php get_footer();
