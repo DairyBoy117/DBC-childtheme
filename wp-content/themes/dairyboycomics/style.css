@@ -27,6 +27,7 @@
 	width: 100% !important;
 }
 
+
 /*--- BODY ---*/
 
 body {
@@ -39,6 +40,18 @@ body {
 table#comic-nav-wrapper {
 	margin: 25px auto !important;
 }
+
+.content-block {
+	background-color: #fff;
+	border-radius: 10px;
+	margin-bottom: 10px;
+	padding: 10px;
+}
+
+.clearleft {
+	clear: left;
+}
+
 
 /*--- HEADER ---*/
 
@@ -189,14 +202,6 @@ li.menu-item-has-children:hover ul.sub-menu {
 
 /*--- CONTENT ---*/
 
-.page-template-template-select #content-wrapper, 
-.page-template-template-select #content-wrapper {
-	background-color: #fff;
-	border-radius: 10px;
-	margin-bottom: 10px;
-	padding: 10px;
-}
-
 .series-logo {
 	width: 100%;
 }
@@ -219,6 +224,18 @@ li.menu-item-has-children:hover ul.sub-menu {
 	height: 1px;
 	background: #717171;
 	border-bottom: 1px solid #E0E0E0;
+}
+
+
+/*--- ARCHIVE ---*/
+
+.search-form .search-btn {
+	margin: 20px 0 0;
+}
+
+.search-form .option-bar {
+	float: left;
+	padding: 0 22px;
 }
 
 

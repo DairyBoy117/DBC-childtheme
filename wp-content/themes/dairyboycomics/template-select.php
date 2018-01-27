@@ -4,7 +4,7 @@ Template Name: Select Comic
 */
 get_header(); ?>
 
-<div id="content-wrapper">
+<div id="content-wrapper" class="content-block">
 	<div class="comic-series">
 		<div class="row">
 			<div class="col-xs-6">
