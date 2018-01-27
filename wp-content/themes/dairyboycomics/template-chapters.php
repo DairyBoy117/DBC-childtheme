@@ -2,53 +2,60 @@
 /*
 Template Name: Chapter Archive
 */
-get_header(); ?>
+get_header(); 
+
+$comic = $_GET['series'];
+$comic = sanitize_text_field($comic); ?>
 
 	<div class="content-block search-form">
+		<h3>Search Archive</h3>
 		<form class="" action="<?php bloginfo('url'); ?>/comic/" method="get">
 			<?php include_search_form(); ?>
 			<div class="clearleft"></div>
 		</form>
 	</div>
 
+	<div class="content-block archive-select">
+		<div class="row">
+			<div class="col-xs-4">
+				<?php if ($comic == "austins-inferno") { ?>
+					<div class="comic-img current">
+				<?php } else { ?>
+					<div class="comic-img">
+				<?php } ?>
+					<a href="<?php site_url(); ?>/comics/?series=austins-inferno">
+						<img src="<?php echo get_stylesheet_directory_uri() ?>/img/ai-logo.png" alt="Austin's Inferno">
+					</a>
+				</div>
+			</div>
+			<div class="col-xs-4">
+				<?php if ($comic == "ass") { ?>
+					<div class="comic-img current">
+				<?php } else { ?>
+					<div class="comic-img">
+				<?php } ?>
+					<a href="<?php site_url(); ?>/comics/?series=ass">
+						<img src="<?php echo get_stylesheet_directory_uri() ?>/img/ai-logo.png" alt="Anvil Station Stories">
+					</a>
+				</div>
+			</div>
+			<div class="col-xs-4">
+				<?php if ($comic == "halo-pwned") { ?>
+					<div class="comic-img current">
+				<?php } else { ?>
+					<div class="comic-img">
+				<?php } ?>
+					<a href="<?php site_url(); ?>/comics/?series=halo-pwned">
+						<img src="<?php echo get_stylesheet_directory_uri() ?>/img/ai-logo.png" alt="Halo PWNED">
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
 
 	<div id="content-wrapper" class="content-block">
-		<form class="" action="" method="get">
-
-			<div class="option-bar">
-				<label for="select-comic">Comic</label>
-		    	<span class="selectwrap">
-		        	<select name="series" id="select-comic" class="search-select" tabindex="-1" aria-hidden="true">
-			        	<option value="all" selected="selected">All</option>
-
-						<?php
-						$taxonomy = 'chapters';
-						$term_args = array(
-							'parent' => 0,
-							'order' => 'DESC'
-						);
-						$tax_terms = get_terms($taxonomy, $term_args);
-						?>
-						<ul>
-						<?php
-						foreach ($tax_terms as $tax_term) {  ?>
-						        <option value="<?php echo $tax_term->slug; ?>"><?php echo $tax_term->name; ?></option>
-						<?php } ?>
-
-			        </select>
-		    	</span>
-			</div>
-
-			<div class="option-bar">
-					<input type="submit" value="Switch" class="real-btn btn">
-			</div>	
-
-		</form>
 		
 		<?php
-
-		$comic = $_GET['series'];
-		$comic = sanitize_text_field($comic);
 
 		if ($comic == 'all') {
 			$comic = '';
@@ -80,7 +87,7 @@ get_header(); ?>
 
 					$x++; ?>
 
-					<div class="col-sm-3">
+					<div class="col-xs-3">
 
 						<?php
 						

@@ -229,6 +229,10 @@ li.menu-item-has-children:hover ul.sub-menu {
 
 /*--- ARCHIVE ---*/
 
+.search-form h3 {
+	margin-top: 0;
+}
+
 .search-form .search-btn {
 	margin: 20px 0 0;
 }
@@ -236,6 +240,24 @@ li.menu-item-has-children:hover ul.sub-menu {
 .search-form .option-bar {
 	float: left;
 	padding: 0 22px;
+}
+
+.archive-select .comic-img img {
+    height: 100px;
+    margin: 0 auto;
+    display: block;
+    padding: 5px 10px;
+    background-color: #D3D3D3;
+    border-radius: 10px;
+}
+
+.archive-select .comic-img:hover img {
+	background-color: #A9A9A9;
+}
+
+.archive-select .comic-img.current img,
+.archive-select .comic-img.current:hover img  {
+	background-color: #808080;
 }
 
 

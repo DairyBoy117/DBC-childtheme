@@ -5,9 +5,7 @@ Template Name: Chapter Pages
 get_header(); ?>
 
 	<form class="" action="<?php bloginfo('url'); ?>/comic/" method="get">
-
 		<?php include_search_form(); ?>
-
 	</form>
 
 	<?php
@@ -42,7 +40,7 @@ get_header(); ?>
 
 				$x++; ?>
 
-				<div class="col-sm-3">
+				<div class="col-xs-3">
 
 					<a href="<?php echo the_permalink(); ?>">
 						<img src="<?php echo the_post_thumbnail_url( 'thumbnail' ); ?>" alt="<?php the_title(); ?>">						
