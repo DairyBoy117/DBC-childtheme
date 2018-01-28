@@ -255,7 +255,7 @@ li.menu-item-has-children:hover ul.sub-menu {
     padding: 0 10px;
 }
 
-.archive-select h3 {
+.archive-select h3.return {
 	float: right;
 }
 

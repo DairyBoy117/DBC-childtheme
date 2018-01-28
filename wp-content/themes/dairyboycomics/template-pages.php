@@ -27,24 +27,33 @@ get_header(); ?>
 				<h2><?php echo $series->name; ?>: <?php echo $title->name; ?></h2>		
 			</div>
 			<div class="col-xs-6">
-				<h3><a href="<?php site_url(); ?>/comics/?series=<?php echo $series->slug; ?>">Return to Chapter Select</a></h3>
+				<h3 class="return"><a href="<?php site_url(); ?>/comics/?series=<?php echo $series->slug; ?>">Return to Chapter Select</a></h3>
 			</div>
 		</div>
 
 		<div class="comic-chapters">
 			<?php
-			
+			$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
 			$args = array(
 						'post_type'		=> 'comic',
 						'order'			=> 'ASC',
-						'posts_per_page'=> -1,
 						'chapters' 		=> $chapter,
+						'paged'			=> $paged
 					);
 			$category_posts = new WP_Query($args);
 
-			if($category_posts->have_posts()) : 
+			if($category_posts->have_posts()) : ?>
 
-				$x = 0 ?>
+				<div class="row page-controls-top">
+					<div class="col-xs-6 prev">
+						<?php previous_posts_link(); ?>
+					</div>
+					<div class="col-xs-6 next">
+						<?php next_posts_link( 'Next Page »', $category_posts->max_num_pages ); ?>
+					</div>
+				</div>
+
+				<?php $x = 0; ?>
 			
 				<div class="row">
 
@@ -54,7 +63,8 @@ get_header(); ?>
 						if ($x == 4) { ?>
 							</div>
 							<div class="row">
-						<?php }
+							<?php $x = 0;
+						}
 
 						$x++; ?>
 
@@ -64,9 +74,9 @@ get_header(); ?>
 								<img src="<?php echo the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>">						
 							</a>
 
-							<p>
+							<h3>
 								<a href="<?php echo the_permalink(); ?>"><?php the_title(); ?></a>		
-							</p>
+							</h3>
 
 							<p>
 								<?php echo get_the_date(); ?>
@@ -77,6 +87,15 @@ get_header(); ?>
 				<?php endwhile; ?>
 
 			    </div>
+
+			    <div class="row page-controls-bottom">
+					<div class="col-xs-6 prev">
+						<?php previous_posts_link(); ?>
+					</div>
+					<div class="col-xs-6 next">
+						<?php next_posts_link( 'Next Page »', $category_posts->max_num_pages ); ?>
+					</div>
+				</div>
 
 			<?php else: ?>
 

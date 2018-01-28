@@ -56,20 +56,29 @@ $comic = sanitize_text_field($comic); ?>
 	<div id="content-wrapper" class="content-block">
 		<div class="comic-chapters">
 			<?php
-			
+			$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;			
 			$args = array(
 						'post_type'		=> 'comic',
 						'order'			=> 'ASC',
 						'chapters' 		=> $comic,
-						'posts_per_page'=> -1,
 						'meta_key' 		=> 'is_cover',
-						'meta_value' 	=> 'yes'
+						'meta_value' 	=> 'yes',
+						'paged'			=> $paged
 					);
 			$category_posts = new WP_Query($args);
 
-			if($category_posts->have_posts()) : 
+			if($category_posts->have_posts()) : ?>
 
-				$x = 0 ?>
+				<div class="row page-controls-top">
+					<div class="col-xs-6 prev">
+						<?php previous_posts_link(); ?>
+					</div>
+					<div class="col-xs-6 next">
+						<?php next_posts_link( 'Next Page »', $category_posts->max_num_pages ); ?>
+					</div>
+				</div>
+
+				<?php $x = 0 ?>
 			
 				<div class="row">
 
@@ -79,7 +88,8 @@ $comic = sanitize_text_field($comic); ?>
 						if ($x == 4) { ?>
 							</div>
 							<div class="row">
-						<?php }
+							<?php $x = 0;
+						}
 
 						$x++; ?>
 
@@ -180,6 +190,15 @@ $comic = sanitize_text_field($comic); ?>
 				<?php endwhile; ?>
 
 			    </div>
+
+			    <div class="row page-controls-bottom">
+					<div class="col-xs-6 prev">
+						<?php previous_posts_link(); ?>
+					</div>
+					<div class="col-xs-6 next">
+						<?php next_posts_link( 'Next Page »', $category_posts->max_num_pages ); ?>
+					</div>
+				</div>
 
 			<?php else: ?>
 
