@@ -312,6 +312,14 @@ li.menu-item-has-children:hover ul.sub-menu {
 	padding-left: 0;
 }
 
+.page-controls-top {
+    margin-bottom: 10px;
+}
+
+.next a {
+    float: right;
+}
+
 
 /*--- COMIC ---*/
 
