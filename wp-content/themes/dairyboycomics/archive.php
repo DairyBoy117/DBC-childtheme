@@ -50,7 +50,6 @@ get_header(); ?>
 		$args = array(
 					'post_type'		=> 'comic',
 					'order'			=> 'ASC',
-					'posts_per_page'=> 10,
 					'chapters' 		=> $series,
 					'tag'			=> $tag,
 					'date_query' 	=> array(
@@ -66,7 +65,6 @@ get_header(); ?>
 		$args = array(
 					'post_type'		=> 'comic',
 					'order'			=> 'ASC',
-					'posts_per_page'=> 10,
 					'chapters' 		=> $series,
 					'tag'			=> $tag,
 					'date_query' 	=> array(
@@ -88,8 +86,8 @@ get_header(); ?>
 
 	if($category_posts->have_posts()) : 
 
-		next_posts_link();
 		previous_posts_link();
+		next_posts_link();
 
 		$x = 0 ?>
 	
@@ -121,10 +119,10 @@ get_header(); ?>
 
 	            </div>
 
-		<?php endwhile; ?>
+		<?php endwhile;
 
-		<?php next_posts_link(); ?>
-		<?php previous_posts_link(); ?>
+		previous_posts_link();
+		next_posts_link(); ?>
 
 	    </div>
 
