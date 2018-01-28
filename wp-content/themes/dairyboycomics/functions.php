@@ -26,7 +26,19 @@ function add_bootstrap() {
 add_action( 'wp_enqueue_scripts', 'add_bootstrap' );
 
 
+//Allow shortcode in text widget
 add_filter('widget_text', 'do_shortcode');
+
+//Customize the Excerpt function
+function custom_excerpt_length( $length ) {
+return 30;
+}
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999);
+
+function new_excerpt_more( $more ) {
+    return '...';
+}
+add_filter('excerpt_more', 'new_excerpt_more', 999);
 
 
 //Character Bios CPT
