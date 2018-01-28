@@ -242,6 +242,10 @@ li.menu-item-has-children:hover ul.sub-menu {
 	padding: 0 22px;
 }
 
+.archive-select h2 {
+    margin: 5px;
+}
+
 .archive-select .comic-img img {
     height: 100px;
     margin: 0 auto;
