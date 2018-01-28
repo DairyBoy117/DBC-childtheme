@@ -11,7 +11,7 @@ $comic = sanitize_text_field($comic); ?>
 		<h3>Search Archive</h3>
 		<form class="" action="<?php bloginfo('url'); ?>/comic/" method="get">
 			<?php include_search_form(); ?>
-			<div class="clearleft"></div>
+			<div class="clearFix"></div>
 		</form>
 	</div>
 

@@ -8,22 +8,13 @@ get_header(); ?>
 		<h3>Search Archive</h3>
 		<form class="" action="<?php bloginfo('url'); ?>/comic/" method="get">
 			<?php include_search_form(); ?>
-			<div class="clearleft"></div>
+			<div class="clearFix"></div>
 		</form>
 	</div>
 
 	<div class="content-block archive-select">
 
 		<?php 
-
-		/*
-		Use slug in url to get id of child term
-		Use id of child term to get parent
-		Use id of parent to get parent term
-
-
-
-		*/
 		$chapter = $_GET['title'];
 		$title = get_term_by('slug', $chapter, 'chapters');
 		$terms = get_ancestors( $title->term_id, 'chapters' ); 
@@ -31,7 +22,14 @@ get_header(); ?>
 			$series = get_term_by( 'id', $term, 'chapters' );
 		}?>
 
-		<h2><?php echo $series->name; ?>: <?php echo $title->name; ?></h2>
+		<div class="row">
+			<div class="col-xs-6">
+				<h2><?php echo $series->name; ?>: <?php echo $title->name; ?></h2>		
+			</div>
+			<div class="col-xs-6">
+				<h3><a href="<?php site_url(); ?>/comics/?series=<?php echo $series->slug; ?>">Return to Chapter Select</a></h3>
+			</div>
+		</div>
 
 		<div class="comic-chapters">
 			<?php

@@ -48,8 +48,8 @@ table#comic-nav-wrapper {
 	padding: 10px;
 }
 
-.clearleft {
-	clear: left;
+.clearFix {
+	clear: both;
 }
 
 
@@ -242,8 +242,13 @@ li.menu-item-has-children:hover ul.sub-menu {
 	padding: 0 22px;
 }
 
-.archive-select h2 {
+.archive-select h2, .archive-select h3 {
     margin: 5px;
+    padding: 0 10px;
+}
+
+.archive-select h3 {
+	float: right;
 }
 
 .archive-select .comic-img img {
