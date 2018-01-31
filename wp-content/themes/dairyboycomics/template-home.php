@@ -181,6 +181,8 @@ get_header(); ?>
 					<a href="<?php echo get_post_permalink(); ?>">Read Latest</a>
 
 			<?php endwhile; endif; ?>
+			<a href="<?php site_url(); ?>/comics/?series=ass">| View Archive</a>
+
 		</div>
 		<div class="latest-stuff sidebar-item">
 			<?php
@@ -204,6 +206,7 @@ get_header(); ?>
 					<a href="<?php echo get_post_permalink(); ?>">Read Latest</a>
 
 			<?php endwhile; endif; ?>
+			<a href="<?php site_url(); ?>/comics/?series=halo-pwned">| View Archive</a>
 		</div>
 		<div class="search-form">
 			<h4>Search Comic Archives</h4>
@@ -239,7 +242,7 @@ get_header(); ?>
 
 			<?php the_content(); ?>
 
-			<a href="<?php site_url(); ?>/news/">Read More</a>
+			<a href="<?php site_url(); ?>/news/"><h4>Read More</h4></a>
 
 		<?php endwhile; endif; 
 	?>

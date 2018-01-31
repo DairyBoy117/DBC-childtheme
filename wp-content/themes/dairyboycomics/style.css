@@ -205,6 +205,11 @@ li.menu-item-has-children:hover ul.sub-menu {
 .home .home-news h2 {
 	margin-top: 0px;
 	font-size: 72px;
+	text-align: center;
+}
+
+.home .home-news h4 {
+	font-size: 35px;
 }
 
 
