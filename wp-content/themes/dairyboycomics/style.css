@@ -234,6 +234,13 @@ li.menu-item-has-children:hover ul.sub-menu {
 	border-bottom: 1px solid #E0E0E0;
 }
 
+.single #content-column {
+	border-radius: 10px;
+    background-color: white;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
 
 /*--- ARCHIVE ---*/
 
