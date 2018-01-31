@@ -211,5 +211,5 @@
 </div>
 
 <div class="option-bar">
-		<input type="submit" value="Search" class="real-btn btn">
+		<input type="submit" value="Search" class="real-btn btn search-btn">
 </div>	

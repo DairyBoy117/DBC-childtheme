@@ -4,12 +4,15 @@ Template Name: Select Comic
 */
 get_header(); ?>
 
-<div id="content-wrapper">
+<div id="content-wrapper" class="content-block">
 	<div class="comic-series">
 		<div class="row">
 			<div class="col-xs-6">
 
-				<img src="<?php echo get_stylesheet_directory_uri() ?>/img/ai-logo.png" alt="Austin's Inferno" class="series-logo">
+				<a href="<?php site_url(); ?>/comics/?series=austins-inferno">
+					<img src="<?php echo get_stylesheet_directory_uri() ?>/img/ai-logo.png" alt="Austin's Inferno" class="series-logo">
+				</a>
+				
 				
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut interdum vitae dui id efficitur. Suspendisse fermentum fermentum neque eu fermentum. Nulla sed mauris eget massa malesuada commodo. Donec eget nibh faucibus, sodales mauris eget, lobortis sapien. Quisque ac tempor odio. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque suscipit bibendum nisl vitae vulputate.</p>
 
@@ -80,7 +83,9 @@ get_header(); ?>
 			</div>
 			<div class="col-xs-6">
 
-				<img src="<?php echo get_stylesheet_directory_uri() ?>/img/ai-logo.png" alt="Austin's Inferno" class="series-logo">
+				<a href="<?php site_url(); ?>/comics/?series=ass">
+					<img src="<?php echo get_stylesheet_directory_uri() ?>/img/ai-logo.png" alt="Austin's Inferno" class="series-logo">	
+				</a>
 
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut interdum vitae dui id efficitur. Suspendisse fermentum fermentum neque eu fermentum. Nulla sed mauris eget massa malesuada commodo. Donec eget nibh faucibus, sodales mauris eget, lobortis sapien. Quisque ac tempor odio. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque suscipit bibendum nisl vitae vulputate.</p>
 
@@ -136,8 +141,10 @@ get_header(); ?>
 	<div class="comic-series">
 		<div class="row">
 			<div class="col-xs-6">
-
-				<img src="<?php echo get_stylesheet_directory_uri() ?>/img/ai-logo.png" alt="Austin's Inferno" class="series-logo">
+				
+				<a href="<?php site_url(); ?>/comics/?series=halo-pwned">
+					<img src="<?php echo get_stylesheet_directory_uri() ?>/img/ai-logo.png" alt="Austin's Inferno" class="series-logo">
+				</a>
 
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut interdum vitae dui id efficitur. Suspendisse fermentum fermentum neque eu fermentum. Nulla sed mauris eget massa malesuada commodo. Donec eget nibh faucibus, sodales mauris eget, lobortis sapien. Quisque ac tempor odio. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque suscipit bibendum nisl vitae vulputate.</p>
 

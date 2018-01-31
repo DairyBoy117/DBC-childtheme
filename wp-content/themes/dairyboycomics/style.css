@@ -8,7 +8,6 @@
  Version:      1.0.0
 */
 
-
 /*--- REMOVING SIDEBARS ---*/
 
 .single-characters #sidebar-left, .single-characters #sidebar-right,
@@ -27,6 +26,7 @@
 	width: 100% !important;
 }
 
+
 /*--- BODY ---*/
 
 body {
@@ -39,6 +39,27 @@ body {
 table#comic-nav-wrapper {
 	margin: 25px auto !important;
 }
+
+.content-block {
+	background-color: #fff;
+	border-radius: 10px;
+	margin-bottom: 10px;
+	padding: 10px;
+}
+
+.clearFix {
+	clear: both;
+}
+
+#content-wrapper a {
+	color: #31708f;
+	text-decoration: none;
+}
+
+h1, h2, h3, h4 {
+	font-family: 'Paytone One', sans-serif !important;
+}
+
 
 /*--- HEADER ---*/
 
@@ -189,14 +210,6 @@ li.menu-item-has-children:hover ul.sub-menu {
 
 /*--- CONTENT ---*/
 
-.page-template-template-select #content-wrapper, 
-.page-template-template-select #content-wrapper {
-	background-color: #fff;
-	border-radius: 10px;
-	margin-bottom: 10px;
-	padding: 10px;
-}
-
 .series-logo {
 	width: 100%;
 }
@@ -206,7 +219,7 @@ li.menu-item-has-children:hover ul.sub-menu {
 }
 
 .comic-series {
-	padding: 10px 0;
+	padding: 10px;
 }
 
 .comic-series a {
@@ -219,6 +232,127 @@ li.menu-item-has-children:hover ul.sub-menu {
 	height: 1px;
 	background: #717171;
 	border-bottom: 1px solid #E0E0E0;
+}
+
+.single #content-column {
+	border-radius: 10px;
+    background-color: white;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+
+/*--- ARCHIVE ---*/
+
+.content-block.search-form h3 {
+	margin-top: 0;
+}
+
+.content-block.search-form .search-btn {
+	margin: 20px 0 0;
+}
+
+.content-block.search-form .option-bar {
+	float: left;
+	padding: 0 22px;
+}
+
+.archive-select h2, .archive-select h3 {
+    margin: 5px;
+    padding: 0 10px;
+}
+
+.archive-select h3.return {
+	float: right;
+}
+
+.archive-select .comic-img img {
+    height: 100px;
+    margin: 0 auto;
+    display: block;
+    padding: 5px 10px;
+    background-color: #D3D3D3;
+    border-radius: 10px;
+}
+
+.archive-select .comic-img:hover img {
+	background-color: #A9A9A9;
+}
+
+.archive-select .comic-img.current img,
+.archive-select .comic-img.current:hover img  {
+	background-color: #808080;
+}
+
+.comic-chapters {
+	padding: 10px;
+}
+
+.comic-chapters .row {
+	padding: 10px 0;
+}
+
+.comic-chapters h3 {
+	text-align: center;
+    margin: 5px 0 0;
+}
+
+.comic-chapters h3 a {
+	font-size: 24px;
+}
+
+.comic-chapters img {
+	display: block;
+	margin: 0 auto;
+	max-width: 80%;
+}
+
+.comic-chapters p {
+	text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.comic-chapters ul {
+	text-align: center;
+	list-style: none;
+	padding-left: 0;
+}
+
+.page-controls-top {
+    margin-bottom: 10px;
+}
+
+.next a {
+    float: right;
+}
+
+.blog-archive {
+	padding: 10px;
+}
+
+.blog-archive .page-controls-top {
+	border-bottom: 1px solid gray;
+    padding-bottom: 10px;
+}
+
+.blog-entry {
+	margin-bottom: 10px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid gray;
+}
+
+.blog-entry p, .blog-entry a {
+	padding-left: 15px;
+}
+
+.blog-date {
+	margin: 0;
+}
+
+.blog-entry img {
+	display: block;
+	margin: 0 auto;
 }
 
 

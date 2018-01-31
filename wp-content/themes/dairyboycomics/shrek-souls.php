@@ -59,6 +59,10 @@ Template Name: Shrek Souls
 		    imgResize()
 		};
 
+		function forceLeave() {
+			window.location.replace("<?php echo site_url(); ?>");
+		}
+
 	</script>
 
 <?php wp_footer(); ?>
