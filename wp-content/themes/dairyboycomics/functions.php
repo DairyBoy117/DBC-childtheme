@@ -31,7 +31,7 @@ add_filter('widget_text', 'do_shortcode');
 
 //Customize the Excerpt function
 function custom_excerpt_length( $length ) {
-return 30;
+return 60;
 }
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999);
 

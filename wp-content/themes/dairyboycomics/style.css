@@ -320,6 +320,34 @@ li.menu-item-has-children:hover ul.sub-menu {
     float: right;
 }
 
+.blog-archive {
+	padding: 10px;
+}
+
+.blog-archive .page-controls-top {
+	border-bottom: 1px solid gray;
+    padding-bottom: 10px;
+}
+
+.blog-entry {
+	margin-bottom: 10px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid gray;
+}
+
+.blog-entry p, .blog-entry a {
+	padding-left: 15px;
+}
+
+.blog-date {
+	margin: 0;
+}
+
+.blog-entry img {
+	display: block;
+	margin: 0 auto;
+}
+
 
 /*--- COMIC ---*/
 

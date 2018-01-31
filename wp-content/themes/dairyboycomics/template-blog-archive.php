@@ -6,11 +6,10 @@ get_header(); ?>
 
 	<div class="content-block archive-select">
 
-		<div class="">
+		<div class="blog-archive">
 			<?php
 			$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
 			$args = array(
-						'order'			=> 'ASC',
 						'chapters' 		=> $chapter,
 						'paged'			=> $paged
 					);
@@ -30,13 +29,15 @@ get_header(); ?>
 			    <?php while($category_posts->have_posts()) : 
 			        $category_posts->the_post(); ?>
 
-						<div class="row">	
+						<div class="row blog-entry">	
 							<div class="col-xs-6">
 								<h2><?php the_title(); ?></h2>
+								<p class="blog-date"><?php the_date(); ?></p>
 								<?php the_excerpt('30'); ?>
+								<a href="<?php the_permalink(); ?>">Read More</a>
 							</div>
 							<div class="col-xs-6">
-								<?php the_post_thumbnail(); ?>
+								<?php the_post_thumbnail('medium'); ?>
 							</div>
 			    		</div>
 
