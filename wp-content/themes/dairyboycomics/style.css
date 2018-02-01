@@ -301,8 +301,11 @@ li.menu-item-has-children:hover ul.sub-menu {
 	padding: 10px 0;
 }
 
-.comic-chapters h3 {
+.comic-chapters h3, .comic-chapters h4 {
 	text-align: center;
+}
+
+.comic-chapters h3 {
     margin: 5px 0 0;
 }
 

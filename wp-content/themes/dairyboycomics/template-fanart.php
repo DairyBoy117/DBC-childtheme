@@ -32,7 +32,7 @@ get_header(); ?>
 		    <?php while($category_posts->have_posts()) : 
 		        $category_posts->the_post();
 
-					if ($x == 4) { ?>
+					if ($x == 3) { ?>
 						</div>
 						<div class="row">
 						<?php $x = 0;
@@ -40,11 +40,18 @@ get_header(); ?>
 
 					$x++; ?>
 
-					<div class="col-xs-3">
+					<div class="col-xs-4">
 						
 						<a href="#">
 							<img src="<?php echo the_post_thumbnail_url(); ?>" alt="<?php echo get_the_title(); ?>" title="<?php echo get_the_title(); ?>">
 						</a>
+						<h3>
+							<a href="<?php echo site_url(); ?>/chapter/?title=<?php echo $chapterSlug; ?>">
+								<?php the_title(); ?>
+							</a>
+						</h3>
+						<h4>By <?php echo get_field('artist_name'); ?></h4>
+						<?php the_content(); ?>
 
 		            </div>
 
