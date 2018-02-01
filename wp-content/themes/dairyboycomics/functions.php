@@ -96,42 +96,6 @@ function comic_taxonomy() {
 }
 add_action ('init', 'comic_taxonomy', 0);
 
-//Fan Art CPT
-
-function create_fan_art() {
-    $labels = array(
-        'name'                => __( 'Fan Art' ),
-        'singular_name'       => __( 'Art' ),
-        'menu_name'           => __( 'Fan Art' ),
-        'all_items'           => __( 'All Fan Art' ),
-        'view_item'           => __( 'View Art' ),
-        'add_new_item'        => __( 'Add New Art' ),
-        'add_new'             => __( 'Add New' ),
-        'edit_item'           => __( 'Edit Art' ),
-        'update_item'         => __( 'Update Art' ),
-        'search_items'        => __( 'Search Art' )
-    );
-
-    $args = array(
-      'label' => 'Art Pieces',
-      'labels' => $labels,
-        'public' => true,
-        'show_ui' => true,
-        'capability_type' => 'post',
-        'has_archive' => true,
-        'hierarchical' => false,
-        'rewrite' => array('slug' => 'fan-art'),
-        'query_var' => true,
-        'menu_icon' => 'dashicons-admin-customizer',
-        'supports' => array(
-            'title',
-            'editor',
-            'thumbnail'),
-        );
-    register_post_type( 'fan-art', $args );
-}
-add_action( 'init', 'create_fan_art' );
-
 
 //Archive search options
 
