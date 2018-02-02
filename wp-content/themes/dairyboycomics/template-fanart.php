@@ -4,31 +4,6 @@ Template Name: Fan Art
 */
 get_header(); ?>
 
-<style>
-	#lightbox {
-	    position:fixed; /* keeps the lightbox window in the current viewport */
-	    top:0; 
-	    left:0; 
-	    width:100%; 
-	    height:100%; 
-	    background-color: rgba(0, 0, 0, 0.2); 
-	    text-align:center;
-	}
-
-	#lightbox p {
-	    text-align:right; 
-	    color:#fff; 
-	    margin-right:20px; 
-	    font-size:12px; 
-	}
-
-	#lightbox img {
-	    box-shadow:0 0 25px #111;
-	    -webkit-box-shadow:0 0 25px #111;
-	    -moz-box-shadow:0 0 25px #111;
-	}
-</style>
-
 <div id="content-wrapper" class="content-block">
 	<div class="comic-chapters">
 		<?php

@@ -7,32 +7,26 @@ jQuery().ready(function($) {
 			e.preventDefault();
 			
 			var image_href = $(this).attr("href");
-
-			if ($('#lightbox').length > 0) {
-				$('#lightbox').show();
-			}
 			
-			else { 
-				var lightbox = 
-				'<div id="lightbox">' +
-					'<div id="content">' + //insert clicked link's href into img src
-						'<img src="' + image_href +'" />' +
-					'</div>' +	
-				'</div>';
-					
-				//insert lightbox HTML into page
-				$('body').append(lightbox);
+			var lightbox = 
+			'<div id="lightbox">' +
+				'<div id="content">' + 
+					'<img src="' + image_href +'" />' +
+				'</div>' +	
+			'</div>';
+				
+			$('body').append(lightbox);
 
-				var winHeight = $( window ).height();
+			var winHeight = $( window ).height();
+			var winWidth = $( window ).height();
 
-				$('#lightbox img').css('max-height', winHeight);
-			}
+			$('#lightbox img').css('max-height', winHeight);
+			$('#lightbox img').css('max-width', winWidth);
 			
 		});
 		
-		//Click anywhere on the page to get rid of lightbox window
-		$('#lightbox').live('click', function() { //must use live, as the lightbox element is inserted into the DOM
-			$('#lightbox').hide();
+		$('#lightbox').live('click', function() {
+			$('#lightbox').remove();
 		});
 
 	});
