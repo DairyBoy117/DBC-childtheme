@@ -6,11 +6,11 @@ jQuery().ready(function($) {
 			if(window.location.href.indexOf("comic") > -1) {
 		        if (e.keyCode == 37) { 
 		        	e.preventDefault();
-			    	$("a.navi-prev-in").trigger("click");
+			    	$("a.navi-prev-in")[0].click();
 			    }
 			    if (e.keyCode == 39) {
 			    	e.preventDefault();
-			    	$("a.navi-next-in").trigger("click");
+			    	$("a.navi-next-in")[0].click();
 			    }
 		    }
 		});
