@@ -8,11 +8,14 @@ get_header(); ?>
 	<div class="comic-series character-bios">
 
 		<?php
-		$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;			
+		$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+		$comic = $_GET['series'];
+		$comic = sanitize_text_field($comic);			
 		$args = array(
 					'post_type'		=> 'characters',
 					'order'			=> 'ASC',
-					'orderby'			=> 'title',
+					'orderby'		=> 'title',
+					'from_comic' 		=> $comic,
 					'paged'			=> $paged
 				);
 		$category_posts = new WP_Query($args);
