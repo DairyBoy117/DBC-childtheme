@@ -375,6 +375,10 @@ li.menu-item-has-children:hover ul.sub-menu {
 	text-align: center;
 }
 
+.character-info {
+	text-align: center;
+}
+
 /*--- COMIC ---*/
 
 table#comic-nav-wrapper {

@@ -7,7 +7,7 @@
 			<div class="comic-series">
 
 				<div class="row">
-					<div class="col-xs-6">
+					<div class="col-xs-6 character-info">
 						<h1><?php the_title(); ?></h1>
 
 						<?php if ( has_term( 'austins-inferno', 'from_comic' ) ) { 
@@ -98,6 +98,8 @@
 	            if ( $characters -> have_posts() ) : ?>
 
 	            	<div class="row">
+
+	            	<h3 class="character-info">Other characters</h3>
 	                
 	                <?php while ( $characters -> have_posts() ) : $characters -> the_post(); ?>
 	                    <div class="col-xs-1">
