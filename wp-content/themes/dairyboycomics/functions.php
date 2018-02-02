@@ -9,10 +9,16 @@ function theme_styles() {
 add_action( 'wp_enqueue_scripts', 'theme_styles');
 
 function theme_js() {
-    wp_enqueue_script('my-custom-script', get_stylesheet_directory_uri() .'/js/scripts.js', 
-        array('jquery'), null, true);
+    wp_dequeue_script( 'ddsmoothmenu_js' );
+    wp_deregister_script( 'ddsmoothmenu_js' );
+    wp_dequeue_script( 'menubar_js' );
+    wp_deregister_script( 'menubar_js' );
+    wp_register_script( 'custom-scripts', get_stylesheet_directory_uri() . '/js/scripts.js', array('jquery'), NULL, true );
+    wp_enqueue_script('custom-scripts');
+    wp_register_script( 'added-jquery', get_stylesheet_directory_uri() . '/js/jquery-3.3.1.min.js', array('jquery'), NULL, true );
+    wp_enqueue_script('added-jquery');
 }
-add_action( 'wp_enqueue_scripts', 'theme_js');
+add_action( 'wp_enqueue_scripts', 'theme_js', 20);
 
 function add_bootstrap() {
     wp_register_script( 'bootstrap-js', '//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js', 
@@ -95,6 +101,42 @@ function comic_taxonomy() {
 
 }
 add_action ('init', 'comic_taxonomy', 0);
+
+//Fan Art CPT
+
+function create_fan_art() {
+    $labels = array(
+        'name'                => __( 'Fan Art' ),
+        'singular_name'       => __( 'Art' ),
+        'menu_name'           => __( 'Fan Art' ),
+        'all_items'           => __( 'All Fan Art' ),
+        'view_item'           => __( 'View Art' ),
+        'add_new_item'        => __( 'Add New Art' ),
+        'add_new'             => __( 'Add New' ),
+        'edit_item'           => __( 'Edit Art' ),
+        'update_item'         => __( 'Update Art' ),
+        'search_items'        => __( 'Search Art' )
+    );
+
+    $args = array(
+      'label' => 'Art Pieces',
+      'labels' => $labels,
+        'public' => true,
+        'show_ui' => true,
+        'capability_type' => 'post',
+        'has_archive' => true,
+        'hierarchical' => false,
+        'rewrite' => array('slug' => 'fan-art'),
+        'query_var' => true,
+        'menu_icon' => 'dashicons-admin-customizer',
+        'supports' => array(
+            'title',
+            'editor',
+            'thumbnail'),
+        );
+    register_post_type( 'fan-art', $args );
+}
+add_action( 'init', 'create_fan_art' );
 
 
 //Archive search options

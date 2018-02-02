@@ -301,8 +301,11 @@ li.menu-item-has-children:hover ul.sub-menu {
 	padding: 10px 0;
 }
 
-.comic-chapters h3 {
+.comic-chapters h3, .comic-chapters h4 {
 	text-align: center;
+}
+
+.comic-chapters h3 {
     margin: 5px 0 0;
 }
 
@@ -494,3 +497,26 @@ body.page-template-shrek-souls {
 	color: #337ab7;
 }
 
+
+/*--- LIGHTBOX ---*/
+
+#lightbox {
+    position:fixed; /* keeps the lightbox window in the current viewport */
+    top:0; 
+    left:0; 
+    width:100%; 
+    height:100%; 
+    background-color: rgba(0, 0, 0, 0.3); 
+    text-align:center;
+}
+
+#lightbox img {
+	position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+}
