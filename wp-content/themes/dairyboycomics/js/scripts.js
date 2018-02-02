@@ -2,6 +2,8 @@ jQuery().ready(function($) {
 	
 	$(document).ready(function(){
 
+		//Arrow Nav
+		
 		$(document).keydown(function(e){
 			if(window.location.href.indexOf("comic") > -1) {
 		        if (e.keyCode == 37) { 
