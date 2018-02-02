@@ -52,7 +52,7 @@ get_header(); ?>
 							<h3><?php the_title(); ?></h3>
 						</a>
 						<a href="<?php the_permalink(); ?>">
-							<img src="<?php echo the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>" class="bio-img">
+							<img src="<?php echo get_field('character_thumbnail'); ?>" alt="<?php the_title(); ?>" class="bio-img">
 						</a>
 
 		            </div>
