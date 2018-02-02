@@ -4,6 +4,32 @@ Template Name: Fan Art
 */
 get_header(); ?>
 
+<style>
+	#lightbox {
+	    position:fixed; /* keeps the lightbox window in the current viewport */
+	    top:0; 
+	    left:0; 
+	    width:100%; 
+	    height:100%; 
+	    background-color: rgba(0, 0, 0, 0.2); 
+	    text-align:center;
+	}
+
+	#lightbox p {
+	    text-align:right; 
+	    color:#fff; 
+	    margin-right:20px; 
+	    font-size:12px; 
+	}
+
+	#lightbox img {
+	    box-shadow:0 0 25px #111;
+	    -webkit-box-shadow:0 0 25px #111;
+	    -moz-box-shadow:0 0 25px #111;
+	    max-width:940px;
+	}
+</style>
+
 <div id="content-wrapper" class="content-block">
 	<div class="comic-chapters">
 		<?php
@@ -27,7 +53,7 @@ get_header(); ?>
 
 			<?php $x = 0 ?>
 		
-			<div class="row">
+			<div class="row wrapper">
 
 		    <?php while($category_posts->have_posts()) : 
 		        $category_posts->the_post();
@@ -42,7 +68,7 @@ get_header(); ?>
 
 					<div class="col-xs-4">
 						
-						<a href="#">
+						<a href="<?php echo get_the_post_thumbnail_url(); ?>" class="lightbox_trigger">
 							<img src="<?php echo the_post_thumbnail_url(); ?>" alt="<?php echo get_the_title(); ?>" title="<?php echo get_the_title(); ?>">
 						</a>
 						<h3>
