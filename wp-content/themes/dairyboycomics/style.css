@@ -367,6 +367,13 @@ li.menu-item-has-children:hover ul.sub-menu {
 	margin: 0 auto;
 }
 
+.character-bios img {
+	max-width: 100%;
+}
+
+.character-bios h3 {
+	text-align: center;
+}
 
 /*--- COMIC ---*/
 
