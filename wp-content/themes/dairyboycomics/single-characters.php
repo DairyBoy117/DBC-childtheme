@@ -77,12 +77,19 @@
 			</div>
 
 			<?php
+
+			if ( has_term( 'austins-inferno', 'from_comic' ) ) {
+				$comic = 'austins-inferno';
+			} else if ( has_term( 'halo-pwned', 'from_comic' ) ) {
+				$comic = 'halo-pwned';
+			}
+
 			//All other characters
 			$otherCharacters = array (
 				'post_type'			=> 'characters',
 				'orderby'			=> 'title',
 				'order'				=> 'ASC',
-				'from_comic'		=> 'austins-inferno',
+				'from_comic'		=> $comic,
                 'posts_per_page'    => -1
             );
             $characters = new WP_Query( $otherCharacters );
