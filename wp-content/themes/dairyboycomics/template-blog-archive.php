@@ -31,7 +31,7 @@ get_header(); ?>
 
 						<div class="row blog-entry">	
 							<div class="col-xs-6">
-								<h2><?php the_title(); ?></h2>
+								<a href="<?php the_permalink(); ?>"><h2><?php the_title(); ?></h2></a>
 								<p class="blog-date"><?php the_date(); ?></p>
 								<?php the_excerpt('30'); ?>
 								<a href="<?php the_permalink(); ?>">Read More</a>
