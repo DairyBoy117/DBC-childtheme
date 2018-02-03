@@ -2,15 +2,43 @@
 /*
 Template Name: Characters
 */
-get_header(); ?>
+get_header(); 
+
+$comic = $_GET['series'];
+$comic = sanitize_text_field($comic); ?>
+
+<div class="content-block archive-select">
+	<div class="row">
+		<div class="col-xs-6">
+			<?php if ($comic == "austins-inferno") { ?>
+				<div class="comic-img current">
+			<?php } else { ?>
+				<div class="comic-img">
+			<?php } ?>
+				<a href="<?php site_url(); ?>/characters-bios/?series=austins-inferno">
+					<img src="<?php echo get_stylesheet_directory_uri() ?>/img/ai-logo.png" alt="Austin's Inferno">
+				</a>
+			</div>
+		</div>
+		<div class="col-xs-6">
+			<?php if ($comic == "ass") { ?>
+				<div class="comic-img current">
+			<?php } else { ?>
+				<div class="comic-img">
+			<?php } ?>
+				<a href="<?php site_url(); ?>/characters-bios/?series=halo-pwned">
+					<img src="<?php echo get_stylesheet_directory_uri() ?>/img/ai-logo.png" alt="Anvil Station Stories">
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
 
 <div id="content-wrapper" class="content-block">
 	<div class="comic-series character-bios">
 
 		<?php
-		$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
-		$comic = $_GET['series'];
-		$comic = sanitize_text_field($comic);			
+		$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;			
 		$args = array(
 					'post_type'		=> 'characters',
 					'order'			=> 'ASC',

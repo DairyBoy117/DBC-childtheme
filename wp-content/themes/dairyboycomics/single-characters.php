@@ -19,19 +19,19 @@
 							$answer = get_field('random_answer');
 
 							if ($grade) { ?>
-								<p>Grade: <?php echo $grade; ?></p>
+								<p><strong>Grade:</strong> <?php echo $grade; ?></p>
 							<?php }
 
 							if ($weapon) { ?>
-								<p>Weapon of choice: <?php echo $weapon; ?></p>
+								<p><strong>Weapon of choice:</strong> <?php echo $weapon; ?></p>
 							<?php }
 
 							if ($powers) { ?>
-								<p>Super Powers: <?php echo $powers; ?></p>
+								<p><strong>Super Powers:</strong> <?php echo $powers; ?></p>
 							<?php }
 
 							if ($question) { ?>
-								<p><?php echo $question; ?>: <?php echo $answer; ?></p>
+								<p><strong><?php echo $question; ?>:</strong> <?php echo $answer; ?></p>
 							<?php } 
 						
 						}
@@ -62,19 +62,15 @@
 
 						} ?>
 
+						<?php the_content(); ?>
+
 						<a href="<?php echo get_site_url(); ?>/comic/?characterId=<?php echo get_the_ID(); ?>">View Comics</a>
 					
 					</div>
 					<div class="col-xs-6">
 						
-						<?php the_post_thumbnail( 'medium' ); ?>
+						<img src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>" width="400" height="500">
 
-					</div>
-				</div>
-
-				<div class="row">
-					<div class="col-xs-12">
-						<?php the_content(); ?>
 					</div>
 				</div>
 
