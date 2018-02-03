@@ -9,15 +9,15 @@
 <?php
 	$comicStyle = get_field('change_style');
 	switch ($comicStyle) {
-	    case "thunder-moo":
-	        echo "thunder moo";
-	        break;
-	    case "halo-pwned":
-	        echo "halo";
-	        break;
-	    case "ninth-circle":
-	        echo "ninth circle";
-	        break;
+	    case "thunder-moo": ?>
+	        <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ?>/css/thunder-moo.css" type="text/css" />
+	        <?php break;
+	    case "halo-pwned": ?>
+	        <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ?>/css/halo-pwned.css" type="text/css" />
+	        <?php break;
+	    case "ninth-circle": ?>
+	        <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ?>/css/ninth-circle.css" type="text/css" />
+	        <?php break;
 	}
 ?>
 </head>
