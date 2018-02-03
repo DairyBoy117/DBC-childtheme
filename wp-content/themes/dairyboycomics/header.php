@@ -6,6 +6,20 @@
 	<link rel="pingback" href="<?php bloginfo('pingback_url') ?>" />
 	<meta name="ComicPress" content="<?php echo comicpress_themeinfo('version'); ?>" />
 <?php wp_head(); ?>
+<?php
+	$comicStyle = get_field('change_style');
+	switch ($comicStyle) {
+	    case "thunder-moo":
+	        echo "thunder moo";
+	        break;
+	    case "halo-pwned":
+	        echo "halo";
+	        break;
+	    case "ninth-circle":
+	        echo "ninth circle";
+	        break;
+	}
+?>
 </head>
 
 <body <?php body_class(); ?>>
