@@ -1,3 +1,8 @@
-.single-comic #PW-ad-box {
-	background-color: black;
+.single-comic #PW-ad-box, .single-comic .sidebar-item,
+.single-comic .search-form, .single-comic #content-column {
+	background-color: #000;
+}
+
+.single-comic #menu-main-menu, .single-comic #footer {
+	background-color: #000;
 }
