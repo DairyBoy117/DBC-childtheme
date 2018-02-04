@@ -7,15 +7,15 @@ body {
 	background-color: #777;
 }
 
-.single-comic p, .single-comic label,
-.single-comic .post-text, .single-comic cite, 
-.single-comic .comment-time  {
-	color: #2f2f2f;
-} 
+.single-comic p, .single-comic .post-text,
+.single-comic cite, .single-comic .comment-time,
+.single-comic label  {
+	color: #fff;
+}
 
 .single-comic h1, .single-comic h2,
 .single-comic h3, .single-comic h4{
-	color: #2f2f2f;
+	color: #fff;
 }
 
 .single-comic a {
