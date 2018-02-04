@@ -45,11 +45,7 @@ get_header(); ?>
 						<a href="<?php echo get_the_post_thumbnail_url(); ?>" class="lightbox_trigger">
 							<img src="<?php echo the_post_thumbnail_url(); ?>" alt="<?php echo get_the_title(); ?>" title="<?php echo get_the_title(); ?>">
 						</a>
-						<h3>
-							<a href="<?php echo site_url(); ?>/chapter/?title=<?php echo $chapterSlug; ?>">
-								<?php the_title(); ?>
-							</a>
-						</h3>
+						<h3><?php the_title(); ?></h3>
 						<h4>By <?php echo get_field('artist_name'); ?></h4>
 						<?php the_content(); ?>
 
