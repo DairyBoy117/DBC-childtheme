@@ -200,3 +200,22 @@ function comicpress_copyright_text() {
 	$output .= "</p>\r\n";
 	echo apply_filters('comicpress_copyright_text', $output);
 }
+
+//Change series theme
+
+function series_style() {
+    $comicStyle = get_field('change_style');
+    if (is_single()) {
+        switch ($comicStyle) {
+            case "thunder-moo": ?>
+                <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ?>/css/thunder-moo.css" type="text/css" />
+                <?php break;
+            case "halo-pwned": ?>
+                <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ?>/css/halo-pwned.css" type="text/css" />
+                <?php break;
+            case "ninth-circle": ?>
+                <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ?>/css/ninth-circle.css" type="text/css" />
+                <?php break;
+        }
+    }
+}
