@@ -1,3 +1,7 @@
+body {
+	background-image: url("../img/background-tm.png");
+}
+
 .single-comic #PW-ad-box, .single-comic .sidebar-item,
 .single-comic .search-form, .single-comic #content-column {
 	background-color: #000;
@@ -6,3 +10,14 @@
 .single-comic #menu-main-menu, .single-comic #footer {
 	background-color: #000;
 }
+
+.single-comic p, .single-comic label, 
+.single-comic h1, .single-comic h2,
+.single-comic h3, .single-comic h4,
+.single-comic .post-text  {
+	color: #fff;
+} 
+
+.single-comic cite, .single-comic .comment-time {
+	color: #fff;
+} 

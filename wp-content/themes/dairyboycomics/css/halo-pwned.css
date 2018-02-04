@@ -1,0 +1,23 @@
+body {
+	background-image: url("../img/background-halo.png");
+}
+
+.single-comic #PW-ad-box, .single-comic .sidebar-item,
+.single-comic .search-form, .single-comic #content-column {
+	background-color: #777;
+}
+
+.single-comic p, .single-comic label,
+.single-comic .post-text, .single-comic cite, 
+.single-comic .comment-time  {
+	color: #2f2f2f;
+} 
+
+.single-comic h1, .single-comic h2,
+.single-comic h3, .single-comic h4{
+	color: #2f2f2f;
+}
+
+.single-comic a {
+	color: #b2d7f6 !important;
+}
