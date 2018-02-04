@@ -19,10 +19,11 @@ series_style()?>
 					<a href="<?php echo site_url(); ?>"> 
 						<?php 
 						$comicStyle = get_field('change_style');
-
 						if (is_single()) {
 							if ($comicStyle == "thunder-moo" || $comicStyle == "ninth-circle") { ?>
 								<img src="<?php echo get_stylesheet_directory_uri() ?>/img/dbc-logo-light.png" class="logo" alt="DairyBoy Comics">
+							<?php } else { ?>
+								<img src="<?php echo get_stylesheet_directory_uri() ?>/img/dbc-logo-dark.png" class="logo" alt="DairyBoy Comics">
 							<?php }
 						} else { ?>
 							<img src="<?php echo get_stylesheet_directory_uri() ?>/img/dbc-logo-dark.png" class="logo" alt="DairyBoy Comics">
@@ -40,7 +41,9 @@ series_style()?>
 								    case "halo-pwned": ?>
 								        <img src="<?php echo get_stylesheet_directory_uri() ?>/img/banners/banner_halo.jpg" alt="Home to Austin's Inferno" class="header-banner"/>
 								        <?php break;
-								}
+								    default: ?>
+										<img src="<?php echo get_stylesheet_directory_uri() ?>/img/banners/banner_<?php $random = rand(1,2); echo $random; ?>.jpg" alt="Home to Austin's Inferno" class="header-banner"/>
+								<?php }
 							} else { ?>
 								<img src="<?php echo get_stylesheet_directory_uri() ?>/img/banners/banner_<?php $random = rand(1,2); echo $random; ?>.jpg" alt="Home to Austin's Inferno" class="header-banner"/>
 							<?php } ?>
