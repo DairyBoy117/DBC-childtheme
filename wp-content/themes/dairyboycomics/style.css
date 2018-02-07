@@ -30,7 +30,7 @@
 /*--- BODY ---*/
 
 body {
-	background-image: url("../img/background.png");
+	background-image: url("img/background.png");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -415,23 +415,23 @@ div#sidebar-left img, div#sidebar-right img  {
 /*--- COMIC NAVIGATION---*/
 
 .navi-first-in {
-	background: url('../img/nav/prev-in.png') no-repeat !important;
+	background: url('img/nav/prev-in.png') no-repeat !important;
 }
 
 .navi-prev-in {
-	background: url('../img/nav/prev-in.png') no-repeat !important;
+	background: url('img/nav/prev-in.png') no-repeat !important;
 }
 
 .navi-random {
-	background: url('../img/nav/prev-in.png') no-repeat !important;
+	background: url('img/nav/prev-in.png') no-repeat !important;
 }
 
 .navi-next-in {
-	background: url('../img/nav/prev-in.png') no-repeat !important;
+	background: url('img/nav/prev-in.png') no-repeat !important;
 }
 
 .navi-last-in {
-	background: url('../img/nav/prev-in.png') no-repeat !important;
+	background: url('img/nav/prev-in.png') no-repeat !important;
 }
 
 a.navi, span.navi-void {
@@ -463,30 +463,37 @@ a.navi, span.navi-void {
 }
 
 
-/*--- SHREK ---*/
+/*--- EASTER EGGS ---*/
 
-body.page-template-shrek-souls {
+body.page-template-shrek-souls, 
+body.page-template-ninth-circle {
 	background: none;
 	background-color: #000;
 	position: relative;
 }
 
-.page-template-shrek-souls a {
+.page-template-shrek-souls a,
+.page-template-ninth-circle a {
 	color: #fff;
 	position: absolute;
 	left: 0;
 	bottom: 0;
 }
 
-.page-template-shrek-souls a:hover {
+.page-template-shrek-souls a:hover,
+.page-template-ninth-circle a:hover {
 	color: #fff;
 	text-decoration: none;
 }
 
-.page-template-shrek-souls img {
+.page-template-shrek-souls img,
+.page-template-ninth-circle img {
 	display: block;
 	margin: 0 auto;
 }
+
+
+/*--- NINTH CIRCLE ---*/
 
 
 /*--- FOOTER ---*/

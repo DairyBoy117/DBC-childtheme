@@ -16,26 +16,20 @@ Template Name: Ninth Circle
 </head>
 <body <?php body_class(); ?>>
 
-	<a href="<?php echo site_url(); ?>">Leave this place knowing more than you did before</a>
+	<a href="<?php echo site_url(); ?>">Turn Back</a>
 
-	<img id="shrekSouls" onclick="importantMessage()"" 
-	src="<?php echo get_stylesheet_directory_uri() ?>/img/shrek-souls.jpg" 
-	alt="There is undeniable proof that Shrek and Dark Souls takes place in the same universe"
-	title="There is undeniable proof that Shrek and Dark Souls takes place in the same universe">
+	<img id="prisoner" onclick="forceLeave()" 
+	src="<?php echo get_stylesheet_directory_uri() ?>/img/shrek-souls.jpg">
 
-	<audio id="shrekSong" 
-	src="<?php echo get_stylesheet_directory_uri() ?>/media/Im_On_My_Way.mp3" 
-	autoplay loop></audio>
+	<audio id="silence" 
+	src="<?php echo get_stylesheet_directory_uri() ?>/media/Silence.mp3" 
+	loop></audio>
 
-	<!-- If you're seeing this message, you deserve to know the truth. Garbage memes have been slowly deteriorating my state of mind since high school and there's no going back. I'm scared. -->
+	<!-- You belong to your father, the devil, and you want to carry out your father’s desires. -John 8:44 -->
 
 	<script>
-	    var audio = document.getElementById("shrekSong");
-	    audio.volume = 0.1;
-
-	    function importantMessage() {
-	    	alert("You better check yourself before you Shrek yourself");
-	    }
+	    var audio = document.getElementById("silence");
+	    audio.volume = 0.3;
 
 	    function imgResize() {
 	  	    var myHeight = 0;
@@ -49,7 +43,7 @@ Template Name: Ninth Circle
 		      //IE 4 compatible
 		      myHeight = document.body.clientHeight;
 		    }
-		    var img = document.getElementById('shrekSouls');
+		    var img = document.getElementById('prisoner');
 		    var imgheight = myHeight + 'px';
 		    img.style.height = imgheight;
 	    }
