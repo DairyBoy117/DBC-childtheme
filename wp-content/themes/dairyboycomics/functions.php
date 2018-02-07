@@ -2,7 +2,7 @@
 
 function theme_styles() {
 	wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css' );
-    wp_enqueue_style( 'child-style', get_stylesheet_directory_uri() . '/css/style.css', 
+    wp_enqueue_style( 'child-style', get_stylesheet_directory_uri() . '/style.css', 
         array('parent-style') );
     wp_enqueue_style( 'custom-google-fonts', 'https://fonts.googleapis.com/css?family=Paytone+One', false );
 }
