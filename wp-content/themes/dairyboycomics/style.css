@@ -478,6 +478,14 @@ body.page-template-ninth-circle {
 	position: absolute;
 	left: 0;
 	bottom: 0;
+	z-index: 1;
+}
+
+.page-template-ninth-circle a {
+	font-family: 'Averia Serif Libre';
+	font-weight: 700;
+	font-size: 30px;
+	padding: 10px;
 }
 
 .page-template-shrek-souls a:hover,
@@ -487,9 +495,33 @@ body.page-template-ninth-circle {
 }
 
 .page-template-shrek-souls img,
-.page-template-ninth-circle img {
+.page-template-ninth-circle img#prisoner {
 	display: block;
 	margin: 0 auto;
+}
+
+.page-template-ninth-circle img#left-corner {
+	position: absolute;
+    z-index: 0;
+    left: 0;
+    bottom: 0;
+}
+
+.page-template-ninth-circle img#right-corner {
+	position: absolute;
+    z-index: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.page-template-ninth-circle img#devil {
+	position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 

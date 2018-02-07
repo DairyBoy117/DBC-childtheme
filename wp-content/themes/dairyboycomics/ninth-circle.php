@@ -16,20 +16,30 @@ Template Name: Ninth Circle
 </head>
 <body <?php body_class(); ?>>
 
-	<a href="<?php echo site_url(); ?>">Turn Back</a>
+	<a href="<?php echo site_url(); ?>">TURN BACK</a>
 
-	<img id="prisoner" onclick="forceLeave()" 
-	src="<?php echo get_stylesheet_directory_uri() ?>/img/shrek-souls.jpg">
+	<img id="prisoner" 
+	src="<?php echo get_stylesheet_directory_uri() ?>/img/ninth-circle/ground.png">
+
+	<img id="left-corner" 
+	src="<?php echo get_stylesheet_directory_uri() ?>/img/ninth-circle/left-corner.png">
+
+	<img id="right-corner" 
+	src="<?php echo get_stylesheet_directory_uri() ?>/img/ninth-circle/right-corner.png">
+
+	<img id="devil" 
+	src="<?php echo get_stylesheet_directory_uri() ?>/img/ninth-circle/prisoner.gif">	
 
 	<audio id="silence" 
-	src="<?php echo get_stylesheet_directory_uri() ?>/media/Silence.mp3" 
-	loop></audio>
+	src="<?php echo get_stylesheet_directory_uri() ?>/media/Gathering_Darkness.mp3" 
+	autoplay loop></audio>
 
 	<!-- You belong to your father, the devil, and you want to carry out your father’s desires. -John 8:44 -->
 
 	<script>
 	    var audio = document.getElementById("silence");
-	    audio.volume = 0.3;
+	    audio.volume = 0.2
+	    ;
 
 	    function imgResize() {
 	  	    var myHeight = 0;
@@ -48,7 +58,7 @@ Template Name: Ninth Circle
 		    img.style.height = imgheight;
 	    }
 	  
-	    imgResize()
+	    imgResize();
 	    window.onresize = function () {
 		    imgResize()
 		};
