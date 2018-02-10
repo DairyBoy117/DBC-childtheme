@@ -472,8 +472,14 @@ body.page-template-ninth-circle {
 	position: relative;
 }
 
-.page-template-shrek-souls a,
-.page-template-ninth-circle a {
+.page-template-shrek-souls h1,
+.page-template-ninth-circle h1 {
+	color: #fff;
+	padding: 25px;
+}
+
+.page-template-shrek-souls a#turnBack,
+.page-template-ninth-circle a#turnBack {
 	color: #fff;
 	position: absolute;
 	left: 0;
@@ -481,15 +487,15 @@ body.page-template-ninth-circle {
 	z-index: 1;
 }
 
-.page-template-ninth-circle a {
+.page-template-ninth-circle a#turnBack {
 	font-family: 'Averia Serif Libre';
 	font-weight: 700;
 	font-size: 30px;
 	padding: 10px;
 }
 
-.page-template-shrek-souls a:hover,
-.page-template-ninth-circle a:hover {
+.page-template-shrek-souls a#turnBack:hover,
+.page-template-ninth-circle a#turnBack:hover {
 	color: #fff;
 	text-decoration: none;
 }
