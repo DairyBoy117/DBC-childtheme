@@ -16,9 +16,18 @@ Template Name: Ninth Circle
 </head>
 <body <?php body_class(); ?>>
 
+	<?php 
+		$t = current_time('H');
+
+		if ($t == 15) {
+			$heIsHere = true;
+		} else {
+			$heIsHere = false;
+		}
+	?>
 	<a href="<?php echo site_url(); ?>">TURN BACK</a>
 
-	<img id="prisoner" 
+	<img id="ground" 
 	src="<?php echo get_stylesheet_directory_uri() ?>/img/ninth-circle/ground.png">
 
 	<img id="left-corner" 
@@ -27,17 +36,33 @@ Template Name: Ninth Circle
 	<img id="right-corner" 
 	src="<?php echo get_stylesheet_directory_uri() ?>/img/ninth-circle/right-corner.png">
 
-	<img id="devil" 
-	src="<?php echo get_stylesheet_directory_uri() ?>/img/ninth-circle/prisoner.gif">	
+	<?php if ($heIsHere) { ?>
 
-	<audio id="silence" 
-	src="<?php echo get_stylesheet_directory_uri() ?>/media/Gathering_Darkness.mp3" 
-	autoplay loop></audio>
+		<img id="prisoner" 
+		src="<?php echo get_stylesheet_directory_uri() ?>/img/ninth-circle/prisoner.gif">
+		<script> document.getElementById('prisoner').ondragstart = function() { return false; }; </script>	
+
+		<audio id="darkness" 
+		src="<?php echo get_stylesheet_directory_uri() ?>/media/Gathering_Darkness.mp3" 
+		autoplay loop></audio>
+
+	<?php } else { ?>
+
+		<audio id="silence" 
+		src="<?php echo get_stylesheet_directory_uri() ?>/media/Silence.mp3" 
+		autoplay loop></audio>
+
+	<?php } ?>
 
 	<!-- You belong to your father, the devil, and you want to carry out your father’s desires. -John 8:44 -->
 
 	<script>
-	    var audio = document.getElementById("silence");
+
+		document.getElementById('ground').ondragstart = function() { return false; };
+		document.getElementById('left-corner').ondragstart = function() { return false; };
+		document.getElementById('right-corner').ondragstart = function() { return false; };
+
+	    var audio = document.getElementById("darkness");
 	    audio.volume = 0.2
 	    ;
 
@@ -53,7 +78,7 @@ Template Name: Ninth Circle
 		      //IE 4 compatible
 		      myHeight = document.body.clientHeight;
 		    }
-		    var img = document.getElementById('prisoner');
+		    var img = document.getElementById('ground');
 		    var imgheight = myHeight + 'px';
 		    img.style.height = imgheight;
 	    }
@@ -66,6 +91,24 @@ Template Name: Ninth Circle
 		function forceLeave() {
 			window.location.replace("<?php echo site_url(); ?>");
 		}
+
+		/*
+
+		Wait 30 seconds
+
+		Decide the number of jump scares and if the user gets to ask a question
+
+		10% chance of user asking
+
+		Begin question dialogue
+
+		User picks yes or no to asking
+
+		User picks question
+
+		Answer provided, jump scare sends user away
+
+		*/
 
 	</script>
 

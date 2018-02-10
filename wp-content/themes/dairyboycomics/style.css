@@ -495,7 +495,7 @@ body.page-template-ninth-circle {
 }
 
 .page-template-shrek-souls img,
-.page-template-ninth-circle img#prisoner {
+.page-template-ninth-circle img#ground {
 	display: block;
 	margin: 0 auto;
 }
@@ -514,7 +514,7 @@ body.page-template-ninth-circle {
     bottom: 0;
 }
 
-.page-template-ninth-circle img#devil {
+.page-template-ninth-circle img#prisoner {
 	position: absolute;
     margin-left: auto;
     margin-right: auto;
