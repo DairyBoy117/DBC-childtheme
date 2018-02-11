@@ -109,25 +109,37 @@ Template Name: Ninth Circle
 				window.location.replace("<?php echo site_url(); ?>");
 			}
 
-			function chances() {
-				var patience = Math.floor(Math.random() * 9);
+			//His mood will determine your fate
+			var patience = Math.floor(Math.random() * 9);
 
-				console.log(patience);
+			console.log(patience);
 
-				if (patience == 0) {
-					var accepted = true;
-				}
-
-				var messages = Math.floor(Math.random() * 7);
-
-				console.log(messages);
-
-				for (var counter = 1; counter <= messages; counter++) {
-				   console.log("yolo");
-				}
+			if (patience == 0) {
+				var accepted = true;
 			}
 
-			chances();
+			//You will know only what he decides
+			var messages = Math.floor(Math.random() * 6);
+
+			console.log(messages);
+
+			function verse() {
+				setTimeout(function() {
+					console.log("yolo");
+				}, Math.floor(Math.random() * 10) * 1000)
+			}
+
+			function handler(count) {
+				var caller = arguments.callee;
+			    if (count > 0) {
+			        verse();
+			        window.setTimeout(function() {
+			            caller(count - 1);
+			        }, 100);    
+			    }
+			};
+
+			handler(messages);
 
 			/*
 
