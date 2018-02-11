@@ -18,7 +18,7 @@ Template Name: Shrek Souls
 
 	<?php
 	if ( wp_is_mobile() ) { ?>
-	    <h1>Your device cannot fathom the information contained within this page. Redirecting you back to home...</h1>
+	    <h1>Only a desktop can fathom the information contained within this page. Redirecting you back to home...</h1>
 
 	    <a href="<?php echo site_url(); ?>">
 	    	<h1>If redirection doesn't work, click here</h1>
@@ -29,7 +29,7 @@ Template Name: Shrek Souls
 				window.location.replace("<?php echo site_url(); ?>");
 			}
 			setTimeout(function () {
-		        //forceLeave();
+		        forceLeave();
 		    }, 3000);
 	    </script>
 	<?php } else { ?>

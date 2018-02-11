@@ -18,7 +18,7 @@ Template Name: Ninth Circle
 
 	<?php
 	if ( wp_is_mobile() ) { ?>
-	    <h1>Your device cannot fathom the information contained within this page. Redirecting you back to home...</h1>
+	    <h1>Only a desktop can fathom the information contained within this page. Redirecting you back to home...</h1>
 
 	    <a href="<?php echo site_url(); ?>">
 	    	<h1>If redirection doesn't work, click here</h1>
@@ -65,7 +65,7 @@ Template Name: Ninth Circle
 
 		<?php } else { ?>
 
-			<audio id="silence" 
+			<audio id="darkness" 
 			src="<?php echo get_stylesheet_directory_uri() ?>/media/Silence.mp3" 
 			autoplay loop></audio>
 
@@ -108,6 +108,26 @@ Template Name: Ninth Circle
 			function forceLeave() {
 				window.location.replace("<?php echo site_url(); ?>");
 			}
+
+			function chances() {
+				var patience = Math.floor(Math.random() * 9);
+
+				console.log(patience);
+
+				if (patience == 0) {
+					var accepted = true;
+				}
+
+				var messages = Math.floor(Math.random() * 7);
+
+				console.log(messages);
+
+				for (var counter = 1; counter <= messages; counter++) {
+				   console.log("yolo");
+				}
+			}
+
+			chances();
 
 			/*
 
