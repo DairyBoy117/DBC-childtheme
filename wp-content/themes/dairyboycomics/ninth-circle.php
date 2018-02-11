@@ -109,6 +109,13 @@ Template Name: Ninth Circle
 				window.location.replace("<?php echo site_url(); ?>");
 			}
 
+			function begone(){
+				console.log("leave");
+				setTimeout(function() {
+					forceLeave();
+				}, 5000);
+			}
+
 			//His mood will determine your fate
 			var patience = Math.floor(Math.random() * 9);
 
@@ -135,19 +142,18 @@ Template Name: Ninth Circle
 			        verse();
 			        window.setTimeout(function() {
 			            caller(count - 1);
-			        }, 100);    
+			        }, 100);
 			    }
 			};
 
 			handler(messages);
 
+			
+
+
 			/*
 
-			Wait 30 seconds
-
-			Decide the number of jump scares and if the user gets to ask a question
-
-			10% chance of user asking
+			Wait 30 seconds before starting challenge
 
 			Begin question dialogue
 
