@@ -133,7 +133,7 @@ Template Name: Ninth Circle
 				var check6 = false;
 				var accepted = false;
 
-					var verse = Math.floor(Math.random() * 2);
+					var verse = Math.floor(Math.random() * 666);
 					if (verse === 0) {
 						console.log("leave 1");
 					} else {
@@ -145,7 +145,7 @@ Template Name: Ninth Circle
 
 				while( check1 == true ) {
 
-						verse = Math.floor(Math.random() * 2);
+						verse = Math.floor(Math.random() * 10);
 						if (verse == 0) {
 							console.log("leave 2");
 						} else {
@@ -158,7 +158,7 @@ Template Name: Ninth Circle
 
 				while( check2 == true ) {
 
-						verse = Math.floor(Math.random() * 2);
+						verse = Math.floor(Math.random() * 5);
 						if (verse === 0) {
 								console.log("leave 3");
 						} else {
@@ -171,7 +171,7 @@ Template Name: Ninth Circle
 
 				while( check3 == true ) {
 
-						verse = Math.floor(Math.random() * 2);
+						verse = Math.floor(Math.random() * 5);
 						if (verse === 0) {
 							console.log("leave 4");
 						} else {
