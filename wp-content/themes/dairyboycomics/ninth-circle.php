@@ -36,7 +36,7 @@ Template Name: Ninth Circle
 
 		$t = current_time('H');
 
-		if ($t == 15) {
+		if ($t == 18) {
 			$heIsHere = true;
 		} else {
 			$heIsHere = false;
@@ -111,11 +111,174 @@ Template Name: Ninth Circle
 
 			function begone(){
 				console.log("leave");
-				setTimeout(function() {
-					forceLeave();
-				}, 5000);
+				//setTimeout(function() {
+					//forceLeave();
+				//}, 5000);
+				var leave = true;
 			}
 
+			function verse() {
+				setTimeout(function() {
+					console.log("yolo");
+				}, Math.floor(Math.random() * 10) * 1000)
+			}
+
+
+			function the_test() {
+				var check1 = false;
+				var check2 = false;
+				var check3 = false;
+				var check4 = false;
+				var check5 = false;
+				var check6 = false;
+				var accepted = false;
+
+					var verse = Math.floor(Math.random() * 666);
+					if (verse === 0) {
+						console.log("leave 1");
+					} else {
+						console.log("yolo 1");
+						check1 = true;
+					}
+
+
+
+				while( check1 == true ) {
+
+						verse = Math.floor(Math.random() * 10);
+						if (verse == 0) {
+							console.log("leave 2");
+						} else {
+							console.log("yolo 2");
+							check2 = true;
+						}
+						check1 = false;
+
+				}
+
+				while( check2 == true ) {
+
+						verse = Math.floor(Math.random() * 5);
+						if (verse === 0) {
+								console.log("leave 3");
+						} else {
+							console.log("yolo 3");
+							check3 = true;
+						}
+						check2 = false;
+
+				}
+
+				while( check3 == true ) {
+
+						verse = Math.floor(Math.random() * 5);
+						if (verse === 0) {
+							console.log("leave 4");
+						} else {
+							console.log("yolo 4");
+							check4 = true;
+						}
+						check3 = false;
+
+				}
+
+				while( check4 == true ) {
+
+						verse = Math.floor(Math.random() * 2);
+						if (verse === 0) {
+								console.log("leave 5");
+						} else {
+							console.log("yolo 5");
+							check5 = true;
+						}
+						check4 = false;
+
+				}
+
+				while( check5 == true ) {
+
+						verse = Math.floor(Math.random() * 2);
+						if (verse === 0) {
+								console.log("leave 6");
+						} else {
+							console.log("yolo 6");
+							check6 = true;
+						}
+						check5 = false;
+						accepted = true;
+
+				}
+
+				while( accepted == true ) {
+
+						console.log("completed");
+						accepted = false;
+						
+				}
+			}
+/*
+			function the_test() {
+				var verse = Math.floor(Math.random() * 666);
+				console.log(verse);
+				if (verse === 0) {
+						console.log("leave 1");
+				} else {
+					setTimeout(function() {
+						console.log("yolo 1");
+					}, Math.floor(Math.random() * 10) * 1000);
+
+					var verse = Math.floor(Math.random() * 10);
+					if (verse == 0) {
+						console.log("leave 2");
+					} else {
+						setTimeout(function() {
+							console.log("yolo 2");
+						}, Math.floor(Math.random() * 10) * 1000);
+
+						var verse = Math.floor(Math.random() * 5);
+						if (verse == 0) {
+							console.log("leave 3");
+						} else {
+							setTimeout(function() {
+								console.log("yolo 3");
+							}, Math.floor(Math.random() * 10) * 1000);
+							var verse = Math.floor(Math.random() * 5);
+
+							if (verse == 0) {
+								console.log("leave 4");
+							} else {
+								setTimeout(function() {
+									console.log("yolo 4");
+								}, Math.floor(Math.random() * 10) * 1000);
+
+								var verse = Math.floor(Math.random() * 2);
+								if (verse == 0) {
+									console.log("leave 5");
+								} else {
+
+									setTimeout(function() {
+										console.log("yolo 5");
+									}, Math.floor(Math.random() * 10) * 1000);
+
+									var verse = Math.floor(Math.random() * 2);
+									if (verse == 0) {
+										console.log("leave 6");
+									} else {
+										setTimeout(function() {
+											console.log("yolo 6");
+										}, Math.floor(Math.random() * 10) * 1000);
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+*/
+			the_test();
+
+
+			/*
 			//His mood will determine your fate
 			var patience = Math.floor(Math.random() * 9);
 
@@ -130,11 +293,7 @@ Template Name: Ninth Circle
 
 			console.log(messages);
 
-			function verse() {
-				setTimeout(function() {
-					console.log("yolo");
-				}, Math.floor(Math.random() * 10) * 1000)
-			}
+
 
 			function handler(count) {
 				var caller = arguments.callee;
@@ -147,7 +306,7 @@ Template Name: Ninth Circle
 			};
 
 			handler(messages);
-
+			*/
 			
 
 
